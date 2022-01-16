@@ -67,7 +67,7 @@ public class Main {
                 /*00*/ "         ___",
                 /*01*/ "      __(_  )___",
                 /*02*/ "    _(          )",
-                /*03*/ "   (     )-----`        |----______________,",
+                /*03*/ "   (     )-----´        |----______________,",
                 /*04*/ "    `---'               |    Kabraxis '22 /",
                 /*05*/ "                        |---____________/",
                 /*06*/ "                        |",
@@ -89,7 +89,6 @@ public class Main {
                 /*22*/ "   | |_|   .     /              \\    .   |_| |",
                 /*23*/ "   |     |:  ,  |    * 1 2 3 *   | ,  :|     |",
                 /*24*/ "   | .   |  |   |    ---------   |  |  |   . |"
-
         };
 
         String[] leftOfBoardCastleArt = {
@@ -248,7 +247,6 @@ public class Main {
                 board[1][2] == ('X') &&
                 board[2][2] == ('X');
 
-
         // >>> O win conditions <<<
 
         // True if the indexes that are building the diagonal line from top left to bottom right
@@ -293,7 +291,6 @@ public class Main {
                 xWinHorizontal1 || xWinHorizontal2 ||
                 xWinHorizontal3 || xWinVertical1 ||
                 xWinVertical2 || xWinVertical3) {
-
             return 'X';
         }
 
@@ -317,6 +314,7 @@ public class Main {
                 }
             }
         }
+
         if (X + O == 9) {
             return 'd';
         }
