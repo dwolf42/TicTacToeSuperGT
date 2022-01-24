@@ -4,11 +4,30 @@
 import java.util.Scanner;
 
 public class Main {
+    public static final String RESET = "\033[0m";
+    public static final String BLACK = "\033[0;1";
+    public static final String RED = "\033[0;31m";
+    public static final String GREEN = "\033[0;32m";
+    public static final String YELLOW = "\033[0;33m";
+    public static final String BLUE = "\033[0;34m";
+    public static final String PURPLE = "\033[0;35m";
+    public static final String CYAN = "\033[0;36m";
+    public static final String WHITE = "\033[0;37m";
+
+    public static final String BLACK_BRIGHT = "\033[0;90m";
+    public static final String RED_BRIGHT = "\033[0;91m";
+    public static final String GREEN_BRIGHT = "\033[0;92m";
+    public static final String YELLOW_BRIGHT = "\033[0;93m";
+    public static final String BLUE_BRIGHT = "\033[0;94m";
+    public static final String PURPLE_BRIGHT = "\033[0;95m";
+    public static final String CYAN_BRIGHT = "\033[0;96m";
+    public static final String WHITE_BRIGHT = "\033[0;97m";
 
     // Game always starts with player X
     static char currentPlayer = 'X';
 
     public static void main(String[] args) {
+
 
         char[][] board = {
                 // 1,1   1,2  1,3 <- locations entered by user
@@ -64,19 +83,44 @@ public class Main {
     public static void printArrayBoardArt(char[][] board) {
 
         String[] upperCastleArt = {
-                /*00*/ "         ___",
-                /*01*/ "      __(_  )___",
-                /*02*/ "    _(          )",
-                /*03*/ "   (     )-----´        |----______________,",
-                /*04*/ "    `---'               |    Kabraxis '22 /",
-                /*05*/ "                        |---____________/",
-                /*06*/ "                        |",
-                /*07*/ "                        X                     \\,/",
-                /*08*/ "                       /~\\",
-                /*09*/ "                      /~~~\\                         /`\\",
-                /*10*/ "                     /~~~~~\\",
-                /*11*/ "      |---____,     /~~~~~~~\\             |---____,",
-                /*12*/ "      |--____/     /~~~~~~~~~\\            |--____/",
+//                /*00*/ "         ___",
+//                /*01*/ "      __(_  )___",
+//                /*02*/ "    _(          )",
+//                /*03*/ "   (     )-----´        |----______________,",
+//                /*04*/ "    `---'               |    Kabraxis '22 /",
+//                /*05*/ "                        |---____________/",
+//                /*06*/ "                        |",
+//                /*07*/ "                        X                     \\,/",
+//                /*08*/ "                       /~\\",
+//                /*09*/ "                      /~~~\\                         /`\\",
+//                /*10*/ "                     /~~~~~\\",
+//                /*11*/ "      |---____,     /~~~~~~~\\             |---____,",
+//                /*12*/ "      |--____/     /~~~~~~~~~\\            |--____/",
+//                /*13*/ "      |           /~~~~~~~~~~~\\           |",
+//                /*14*/ "      X           |     .   .:|           X",
+//                /*15*/ "     /~\\          |   _   _   |          /~\\",
+//                /*16*/ "    /~~~\\         |  |+| |+|  |         /~~~\\",
+//                /*17*/ "   /~~~~~\\        |  |_| |_|  |        /~~~~~\\",
+//                /*18*/ "   | :   |      __|           |__      | :   |",
+//                /*19*/ "   |.:   |____| ; .           . ; |____|.:   |",
+//                /*20*/ "   |  _    .        __________       .    _  |",
+//                /*21*/ "   | |+| |.  ==   /            \\  ==  .| |+| |",
+//                /*22*/ "   | |_|   .     /              \\    .   |_| |",
+//                /*23*/ "   |     |:  ,  |    * 1 2 3 *   | ,  :|     |",
+//                /*24*/ "   | .   |  |   |    ---------   |  |  |   . |"
+                /*00*/ BLUE + "         ___" + RESET,
+                /*01*/ BLUE + "      __(_  )___" + RESET,
+                /*02*/ BLUE + "    _(          )" + RESET,
+                /*03*/ BLUE + "   (     )-----´" + YELLOW_BRIGHT + "        |----______________," + RESET,
+                /*04*/ BLUE + "    `---'" + YELLOW_BRIGHT + "               |    " + PURPLE_BRIGHT + "Kabraxis '22" + YELLOW_BRIGHT + " /" + RESET,
+                /*05*/ YELLOW_BRIGHT +             "                        |---____________/" + RESET,
+                /*06*/ YELLOW_BRIGHT +             "                        |" + RESET,
+                /*07*/ RED +                       "                        X" + WHITE_BRIGHT + "                     \\,/" + RESET,
+                /*08*/ RED +                       "                       /~\\" + RESET,
+                /*09*/ RED +                       "                      /~~~\\" + WHITE_BRIGHT + "                        /`\\" + RESET,
+                /*10*/ RED +                       "                     /~~~~~\\" + RESET,
+                /*11*/ YELLOW_BRIGHT +  "      |---____,     " + RED + "/~~~~~~~\\             " + YELLOW_BRIGHT + "|---____," + RESET,
+                /*12*/ YELLOW_BRIGHT +  "      |--____/     " + RED + "/~~~~~~~~~\\            " + YELLOW_BRIGHT + "|--____/" + RESET,
                 /*13*/ "      |           /~~~~~~~~~~~\\           |",
                 /*14*/ "      X           |     .   .:|           X",
                 /*15*/ "     /~\\          |   _   _   |          /~\\",
