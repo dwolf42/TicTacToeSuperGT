@@ -23,6 +23,8 @@ public class Main {
     public static final String CYAN_BRIGHT = "\033[0;96m";
     public static final String WHITE_BRIGHT = "\033[0;97m";
 
+    public static final String YELLOW_BACKGROUND = "\033[43m";
+
     // Game always starts with player X
     static char currentPlayer = 'X';
 
@@ -132,27 +134,27 @@ public class Main {
                 /*19*/ WHITE + "   |.:   |____| ; .           . ; |____|.:   |" + RESET,
                 /*20*/ WHITE + "   |  _    .        __________       .    _  |" + RESET,
                 /*21*/ WHITE + "   | |+| |.  ==   /            \\  ==  .| |+| |" + RESET,
-                /*22*/ "   | |_|   .     /              \\    .   |_| |",
-                /*23*/ "   |     |:  ,  |    * 1 2 3 *   | ,  :|     |",
-                /*24*/ "   | .   |  |   |    ---------   |  |  |   . |"
+                /*22*/ WHITE + "   | |_|   .     /              \\    .   |_| |" + RESET,
+                /*23*/ WHITE + "   |     |:  ,  |    " + BLUE_BRIGHT + "* 1 2 3 *   " + WHITE + "| ,  :|     |" + RESET,
+                /*24*/ WHITE + "   | .   |  |   |    " + BLUE_BRIGHT + "---------   " + WHITE + "|  |  |   . |" + RESET
         };
 
         String[] leftOfBoardCastleArt = {
-                /*25 1/2*/ "   |     |  |   |  >1| ",
-                /*26 1/2*/ "   |-    |  |   |  >2| ",
-                /*27 1/2*/ "   _ _   |  |   |  >3| "
+                /*25 1/2*/ WHITE + "   |     |  |   |  " + BLUE_BRIGHT + ">1| " + RESET,
+                /*26 1/2*/ WHITE + "   |-    |  |   |  " + BLUE_BRIGHT + ">2| " + RESET,
+                /*27 1/2*/ GREEN + "   _ _" + WHITE+ "   |  |   |  " + BLUE_BRIGHT + ">3| " + RESET
         };
 
         String[] rightOfBoardCastleArt = {
-                /*25 2/2*/ "|   |  |  |     |",
-                /*26 2/2*/ "|   |  |  |    -|",
-                /*27 2/2*/ "|   |  |  |  _  |"
+                /*25 2/2*/ BLUE_BRIGHT + "| " + WHITE + "  |  |  |     |" + RESET,
+                /*26 2/2*/ BLUE_BRIGHT + "| " + WHITE + "  |  |  |    -|" + RESET,
+                /*27 2/2*/ BLUE_BRIGHT + "| " + WHITE + "  |  |  |  _  |" + RESET
         };
 
         String[] lowerCastleArt = {
-                /*28*/ "    '--~~__ |   |    ---------   |  | _|_    |",
-                /*29*/ "           ~---___________________---~   ~`---,",
-                /*30*/ "                                               ~~----____-~"
+                /*28*/ GREEN + "    '--~~__ " + WHITE +"|   |    " + BLUE_BRIGHT + "--------- " + WHITE + "  |  | " + GREEN + "_" + WHITE + "|" + GREEN + "_    " + WHITE + "|" + RESET,
+                /*29*/ GREEN + "           ~---___________________---~   ~`---," + RESET,
+                /*30*/ GREEN + "                                               ~~----____-~" + RESET
         };
 
         for (String s : upperCastleArt) {
