@@ -4,24 +4,24 @@
 import java.util.Scanner;
 
 public class Main {
-    public static final String RESET = "\033[0m";
-    public static final String BLACK = "\033[0;1";
-    public static final String RED = "\033[0;31m";
-    public static final String GREEN = "\033[0;32m";
-    public static final String YELLOW = "\033[0;33m";
-    public static final String BLUE = "\033[0;34m";
-    public static final String PURPLE = "\033[0;35m";
-    public static final String CYAN = "\033[0;36m";
-    public static final String WHITE = "\033[0;37m";
+    public static final String RE = "\033[0m"; // Reset
+    public static final String BL = "\033[0;1"; // Black
+    public static final String R = "\033[0;31m"; // Red
+    public static final String G = "\033[0;32m"; // Green
+    public static final String Y = "\033[0;33m"; // Yellow
+    public static final String B = "\033[0;34m"; // Blue
+    public static final String P = "\033[0;35m"; // Purple
+    public static final String C = "\033[0;36m"; // Cyan
+    public static final String W = "\033[0;37m"; // White
 
-    public static final String BLACK_BRIGHT = "\033[0;90m";
-    public static final String RED_BRIGHT = "\033[0;91m";
-    public static final String GREEN_BRIGHT = "\033[0;92m";
-    public static final String YELLOW_BRIGHT = "\033[0;93m";
-    public static final String BLUE_BRIGHT = "\033[0;94m";
-    public static final String PURPLE_BRIGHT = "\033[0;95m";
-    public static final String CYAN_BRIGHT = "\033[0;96m";
-    public static final String WHITE_BRIGHT = "\033[0;97m";
+    public static final String BLB = "\033[0;90m"; // Black Bright
+    public static final String RB = "\033[0;91m"; //Red Bright
+    public static final String GB = "\033[0;92m"; // Green Bright
+    public static final String YB = "\033[0;93m"; // Yellow Bright
+    public static final String BB = "\033[0;94m"; // Blue Bright
+    public static final String PB = "\033[0;95m"; // Purple Bright
+    public static final String CB = "\033[0;96m"; // Cyan Bright
+    public static final String WB = "\033[0;97m"; // White Bright
 
     public static final String YELLOW_BACKGROUND = "\033[43m";
 
@@ -102,59 +102,59 @@ public class Main {
 //                /*12*/ "      |--____/     /~~~~~~~~~\\            |--____/",
 //                /*13*/ "      |           /~~~~~~~~~~~\\           |",
 //                /*14*/ "      X           |     .   .:|           X",
-//                /*15*/ "     /~\\          |   _   _   |          /~\\",
-//                /*16*/ "    /~~~\\         |  |+| |+|  |         /~~~\\",
-//                /*17*/ "   /~~~~~\\        |  |_| |_|  |        /~~~~~\\",
+//                /*15*/ "     /~\\         |   _   _   |          /~\\",
+//                /*16*/ "    /~~~\\        |  |+| |+|  |         /~~~\\",
+//                /*17*/ "   /~~~~~\\       |  |_| |_|  |        /~~~~~\\",
 //                /*18*/ "   | :   |      __|           |__      | :   |",
 //                /*19*/ "   |.:   |____| ; .           . ; |____|.:   |",
 //                /*20*/ "   |  _    .        __________       .    _  |",
-//                /*21*/ "   | |+| |.  ==   /            \\  ==  .| |+| |",
-//                /*22*/ "   | |_|   .     /              \\    .   |_| |",
+//                /*21*/ "   | |+| |. ==   /            \\  ==  .| |+| |",
+//                /*22*/ "   | |_|   .    /              \\    .   |_| |",
 //                /*23*/ "   |     |:  ,  |    * 1 2 3 *   | ,  :|     |",
 //                /*24*/ "   | .   |  |   |    ---------   |  |  |   . |"
-                /*00*/ WHITE_BRIGHT + "         ___" + RESET,
-                /*01*/ WHITE_BRIGHT + "      __(_  )___" + RESET,
-                /*02*/ WHITE_BRIGHT + "    _(          )" + RESET,
-                /*03*/ WHITE_BRIGHT + "   (     )-----´" + YELLOW_BRIGHT + "        |----______________," + RESET,
-                /*04*/ WHITE_BRIGHT + "    `---'" + YELLOW_BRIGHT + "               |    " + PURPLE_BRIGHT + "Kabraxis '22" + YELLOW_BRIGHT + " /" + RESET,
-                /*05*/ YELLOW_BRIGHT +             "                        |---____________/" + RESET,
-                /*06*/ YELLOW_BRIGHT +             "                        |" + RESET,
-                /*07*/ RED +                       "                        X" + WHITE_BRIGHT + "                     \\,/" + RESET,
-                /*08*/ RED +                       "                       /~\\" + RESET,
-                /*09*/ RED +                       "                      /~~~\\" + WHITE_BRIGHT + "                        /`\\" + RESET,
-                /*10*/ RED +                       "                     /~~~~~\\" + RESET,
-                /*11*/ YELLOW_BRIGHT +  "      |---____,     " + RED + "/~~~~~~~\\             " + YELLOW_BRIGHT + "|---____," + RESET,
-                /*12*/ YELLOW_BRIGHT +  "      |--____/     " + RED + "/~~~~~~~~~\\            " + YELLOW_BRIGHT + "|--____/" + RESET,
-                /*13*/ YELLOW_BRIGHT +  "      |           " + RED + "/~~~~~~~~~~~\\           " + YELLOW_BRIGHT + "|" + RESET,
-                /*14*/ RED + "      X           " + WHITE_BRIGHT + "|     .   .:|           " + RED + "X" + RESET,
-                /*15*/ RED + "     /~\\          " + WHITE_BRIGHT + "|   _   _   |          " + RED + "/~\\" + RESET,
-                /*16*/ RED + "    /~~~\\         " + WHITE_BRIGHT + "|  |+| |+|  |         " + RED + "/~~~\\" + RESET,
-                /*17*/ RED + "   /~~~~~\\        " + WHITE_BRIGHT + "|  |_| |_|  |        " + RED + "/~~~~~\\" + RESET,
-                /*18*/ WHITE_BRIGHT + "   | :   |      __|           |__      | :   |" + RESET,
-                /*19*/ WHITE_BRIGHT + "   |.:   |____| ; .           . ; |____|.:   |" + RESET,
-                /*20*/ WHITE_BRIGHT + "   |  _    .        __________       .    _  |" + RESET,
-                /*21*/ WHITE_BRIGHT + "   | |+| |.  ==   /            \\  ==  .| |+| |" + RESET,
-                /*22*/ WHITE_BRIGHT + "   | |_|   .     /              \\    .   |_| |" + RESET,
-                /*23*/ WHITE_BRIGHT + "   |     |:  ,  |    " + BLUE_BRIGHT + "* 1 2 3 *   " + WHITE_BRIGHT + "| ,  :|     |" + RESET,
-                /*24*/ WHITE_BRIGHT + "   | .   |  |   |    " + BLUE_BRIGHT + "---------   " + WHITE_BRIGHT + "|  |  |   . |" + RESET
+                /*00*/ WB + "         ___" + RE,
+                /*01*/ WB + "      __(_  )___" + RE,
+                /*02*/ WB + "    _(          )" + RE,
+                /*03*/ WB + "   (     )-----´" + YB +      "        |----______________," + RE,
+                /*04*/ WB + "    `---'" + YB +      "               |    " + PB + "Kabraxis '22" + YB + " /" + RE,
+                /*05*/ YB +                "                        |---____________/" + RE,
+                /*06*/ YB +                "                        |" + RE,
+                /*07*/ RB +                "                        X" + WB + "                     \\,/" + RE,
+                /*08*/ RB +                "                       /~\\" + RE,
+                /*09*/ RB +                "                      /~~~\\" + WB + "                        /`\\" + RE,
+                /*10*/ RB +                "                     /~~~~~\\" + RE,
+                /*11*/ YB +     "      |---____,     "  + RB + "/~~~~~~~\\             " + YB + "|---____," + RE,
+                /*12*/ YB +     "      |--____/     "  + RB + "/~~~~~~~~~\\            " + YB + "|--____/" + RE,
+                /*13*/ YB +     "      |           "  + RB + "/~~~~~~~~~~~\\           " + YB + "|" + RE,
+                /*14*/ RB +     "      X           " +  WB + "|     .   .:|           " + RB + "X" + RE,
+                /*15*/ RB +     "     /~\\          " + WB + "|   _   _   |          " + RB + "/~\\" + RE,
+                /*16*/ RB +     "    /~~~\\         " + WB + "|  |+| |+|  |         " + RB + "/~~~\\" + RE,
+                /*17*/ RB +     "   /~~~~~\\        " + WB + "|  |_| |_|  |        " + RB + "/~~~~~\\" + RE,
+                /*18*/ WB +     "   | :   |      __|           |__      | :   |" + RE,
+                /*19*/ WB +     "   |.:   |____| ; .           . ; |____|.:   |" + RE,
+                /*20*/ WB +     "   |  _    .        __________       .    _  |" + RE,
+                /*21*/ WB +     "   | |+| |.  ==   /            \\  ==  .| |+| |" + RE,
+                /*22*/ WB +     "   | |_|   .     /              \\    .   |_| |" + RE,
+                /*23*/ WB +     "   |     |:  ,  |    " + BB + "* 1 2 3 *   " + WB + "| ,  :|     |" + RE,
+                /*24*/ WB +     "   | .   |  |   |    " + BB + "---------   " + WB + "|  |  |   . |" + RE
         };
 
         String[] leftOfBoardCastleArt = {
-                /*25 1/2*/ WHITE_BRIGHT + "   |     |  |   |  " + BLUE_BRIGHT + ">1| " + RESET,
-                /*26 1/2*/ WHITE_BRIGHT + "   |-    |  |   |  " + BLUE_BRIGHT + ">2| " + RESET,
-                /*27 1/2*/ GREEN + "   _ _" + WHITE_BRIGHT+ "   |  |   |  " + BLUE_BRIGHT + ">3| " + RESET
+                /*25 1/2*/ WB + "   |     |  |   |  " + BB + ">1| " + RE,
+                /*26 1/2*/ WB + "   |-    |  |   |  " + BB + ">2| " + RE,
+                /*27 1/2*/ G + "   _ _" + WB + "   |  |   |  " + BB + ">3| " + RE
         };
 
         String[] rightOfBoardCastleArt = {
-                /*25 2/2*/ BLUE_BRIGHT + "| " + WHITE_BRIGHT + "  |  |  |     |" + RESET,
-                /*26 2/2*/ BLUE_BRIGHT + "| " + WHITE_BRIGHT + "  |  |  |    -|" + RESET,
-                /*27 2/2*/ BLUE_BRIGHT + "| " + WHITE_BRIGHT + "  |  |  |  _  |" + RESET
+                /*25 2/2*/ BB + "| " + WB + "  |  |  |     |" + RE,
+                /*26 2/2*/ BB + "| " + WB + "  |  |  |    -|" + RE,
+                /*27 2/2*/ BB + "| " + WB + "  |  |  |  _  |" + RE
         };
 
         String[] lowerCastleArt = {
-                /*28*/ GREEN + "    '--~~__ " + WHITE_BRIGHT +"|   |    " + BLUE_BRIGHT + "--------- " + WHITE_BRIGHT + "  |  | " + GREEN + "_" + WHITE_BRIGHT + "|" + GREEN + "_    " + WHITE_BRIGHT + "|" + RESET,
-                /*29*/ GREEN + "           ~---___________________---~   ~`---," + RESET,
-                /*30*/ GREEN + "                                               ~~----____-~" + RESET
+                /*28*/ G + "    '--~~__ " + WB +"|   |    " + BB + "--------- " + WB + "  |  | " + G + "_" + WB + "|" + G + "_    " + WB + "|" + RE,
+                /*29*/ G + "           ~---___________________---~   ~`---," + RE,
+                /*30*/ G + "                                               ~~----____-~" + RE
         };
 
         for (String s : upperCastleArt) {
