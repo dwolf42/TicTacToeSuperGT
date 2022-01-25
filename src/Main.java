@@ -27,7 +27,9 @@ public class Main {
     static char currentPlayer = 'X';
 
     public static void main(String[] args) {
-
+        System.out.println("\033[0;91m" + "Hi, this is red");
+        System.out.print("\u001B[0m");
+        System.out.println("hi test if this will reset");
 
         char[][] board = {
                 // 1,1   1,2  1,3 <- locations entered by user
@@ -108,11 +110,11 @@ public class Main {
 //                /*22*/ "   | |_|   .     /              \\    .   |_| |",
 //                /*23*/ "   |     |:  ,  |    * 1 2 3 *   | ,  :|     |",
 //                /*24*/ "   | .   |  |   |    ---------   |  |  |   . |"
-                /*00*/ BLUE + "         ___" + RESET,
-                /*01*/ BLUE + "      __(_  )___" + RESET,
-                /*02*/ BLUE + "    _(          )" + RESET,
-                /*03*/ BLUE + "   (     )-----´" + YELLOW_BRIGHT + "        |----______________," + RESET,
-                /*04*/ BLUE + "    `---'" + YELLOW_BRIGHT + "               |    " + PURPLE_BRIGHT + "Kabraxis '22" + YELLOW_BRIGHT + " /" + RESET,
+                /*00*/ WHITE_BRIGHT + "         ___" + RESET,
+                /*01*/ WHITE_BRIGHT + "      __(_  )___" + RESET,
+                /*02*/ WHITE_BRIGHT + "    _(          )" + RESET,
+                /*03*/ WHITE_BRIGHT + "   (     )-----´" + YELLOW_BRIGHT + "        |----______________," + RESET,
+                /*04*/ WHITE_BRIGHT + "    `---'" + YELLOW_BRIGHT + "               |    " + PURPLE_BRIGHT + "Kabraxis '22" + YELLOW_BRIGHT + " /" + RESET,
                 /*05*/ YELLOW_BRIGHT +             "                        |---____________/" + RESET,
                 /*06*/ YELLOW_BRIGHT +             "                        |" + RESET,
                 /*07*/ RED +                       "                        X" + WHITE_BRIGHT + "                     \\,/" + RESET,
@@ -121,15 +123,15 @@ public class Main {
                 /*10*/ RED +                       "                     /~~~~~\\" + RESET,
                 /*11*/ YELLOW_BRIGHT +  "      |---____,     " + RED + "/~~~~~~~\\             " + YELLOW_BRIGHT + "|---____," + RESET,
                 /*12*/ YELLOW_BRIGHT +  "      |--____/     " + RED + "/~~~~~~~~~\\            " + YELLOW_BRIGHT + "|--____/" + RESET,
-                /*13*/ "      |           /~~~~~~~~~~~\\           |",
-                /*14*/ "      X           |     .   .:|           X",
-                /*15*/ "     /~\\          |   _   _   |          /~\\",
-                /*16*/ "    /~~~\\         |  |+| |+|  |         /~~~\\",
-                /*17*/ "   /~~~~~\\        |  |_| |_|  |        /~~~~~\\",
-                /*18*/ "   | :   |      __|           |__      | :   |",
-                /*19*/ "   |.:   |____| ; .           . ; |____|.:   |",
-                /*20*/ "   |  _    .        __________       .    _  |",
-                /*21*/ "   | |+| |.  ==   /            \\  ==  .| |+| |",
+                /*13*/ YELLOW_BRIGHT +  "      |           " + RED + "/~~~~~~~~~~~\\           " + YELLOW_BRIGHT + "|" + RESET,
+                /*14*/ RED + "      X           " + WHITE + "|     .   .:|           " + RED + "X" + RESET,
+                /*15*/ RED + "     /~\\          " + WHITE + "|   _   _   |          " + RED + "/~\\" + RESET,
+                /*16*/ RED + "    /~~~\\         " + WHITE + "|  |+| |+|  |         " + RED + "/~~~\\" + RESET,
+                /*17*/ RED + "   /~~~~~\\        " + WHITE + "|  |_| |_|  |        " + RED + "/~~~~~\\" + RESET,
+                /*18*/ WHITE + "   | :   |      __|           |__      | :   |" + RESET,
+                /*19*/ WHITE + "   |.:   |____| ; .           . ; |____|.:   |" + RESET,
+                /*20*/ WHITE + "   |  _    .        __________       .    _  |" + RESET,
+                /*21*/ WHITE + "   | |+| |.  ==   /            \\  ==  .| |+| |" + RESET,
                 /*22*/ "   | |_|   .     /              \\    .   |_| |",
                 /*23*/ "   |     |:  ,  |    * 1 2 3 *   | ,  :|     |",
                 /*24*/ "   | .   |  |   |    ---------   |  |  |   . |"
