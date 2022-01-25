@@ -126,33 +126,33 @@ public class Main {
                 /*11*/ YELLOW_BRIGHT +  "      |---____,     " + RED + "/~~~~~~~\\             " + YELLOW_BRIGHT + "|---____," + RESET,
                 /*12*/ YELLOW_BRIGHT +  "      |--____/     " + RED + "/~~~~~~~~~\\            " + YELLOW_BRIGHT + "|--____/" + RESET,
                 /*13*/ YELLOW_BRIGHT +  "      |           " + RED + "/~~~~~~~~~~~\\           " + YELLOW_BRIGHT + "|" + RESET,
-                /*14*/ RED + "      X           " + WHITE + "|     .   .:|           " + RED + "X" + RESET,
-                /*15*/ RED + "     /~\\          " + WHITE + "|   _   _   |          " + RED + "/~\\" + RESET,
-                /*16*/ RED + "    /~~~\\         " + WHITE + "|  |+| |+|  |         " + RED + "/~~~\\" + RESET,
-                /*17*/ RED + "   /~~~~~\\        " + WHITE + "|  |_| |_|  |        " + RED + "/~~~~~\\" + RESET,
-                /*18*/ WHITE + "   | :   |      __|           |__      | :   |" + RESET,
-                /*19*/ WHITE + "   |.:   |____| ; .           . ; |____|.:   |" + RESET,
-                /*20*/ WHITE + "   |  _    .        __________       .    _  |" + RESET,
-                /*21*/ WHITE + "   | |+| |.  ==   /            \\  ==  .| |+| |" + RESET,
-                /*22*/ WHITE + "   | |_|   .     /              \\    .   |_| |" + RESET,
-                /*23*/ WHITE + "   |     |:  ,  |    " + BLUE_BRIGHT + "* 1 2 3 *   " + WHITE + "| ,  :|     |" + RESET,
-                /*24*/ WHITE + "   | .   |  |   |    " + BLUE_BRIGHT + "---------   " + WHITE + "|  |  |   . |" + RESET
+                /*14*/ RED + "      X           " + WHITE_BRIGHT + "|     .   .:|           " + RED + "X" + RESET,
+                /*15*/ RED + "     /~\\          " + WHITE_BRIGHT + "|   _   _   |          " + RED + "/~\\" + RESET,
+                /*16*/ RED + "    /~~~\\         " + WHITE_BRIGHT + "|  |+| |+|  |         " + RED + "/~~~\\" + RESET,
+                /*17*/ RED + "   /~~~~~\\        " + WHITE_BRIGHT + "|  |_| |_|  |        " + RED + "/~~~~~\\" + RESET,
+                /*18*/ WHITE_BRIGHT + "   | :   |      __|           |__      | :   |" + RESET,
+                /*19*/ WHITE_BRIGHT + "   |.:   |____| ; .           . ; |____|.:   |" + RESET,
+                /*20*/ WHITE_BRIGHT + "   |  _    .        __________       .    _  |" + RESET,
+                /*21*/ WHITE_BRIGHT + "   | |+| |.  ==   /            \\  ==  .| |+| |" + RESET,
+                /*22*/ WHITE_BRIGHT + "   | |_|   .     /              \\    .   |_| |" + RESET,
+                /*23*/ WHITE_BRIGHT + "   |     |:  ,  |    " + BLUE_BRIGHT + "* 1 2 3 *   " + WHITE_BRIGHT + "| ,  :|     |" + RESET,
+                /*24*/ WHITE_BRIGHT + "   | .   |  |   |    " + BLUE_BRIGHT + "---------   " + WHITE_BRIGHT + "|  |  |   . |" + RESET
         };
 
         String[] leftOfBoardCastleArt = {
-                /*25 1/2*/ WHITE + "   |     |  |   |  " + BLUE_BRIGHT + ">1| " + RESET,
-                /*26 1/2*/ WHITE + "   |-    |  |   |  " + BLUE_BRIGHT + ">2| " + RESET,
-                /*27 1/2*/ GREEN + "   _ _" + WHITE+ "   |  |   |  " + BLUE_BRIGHT + ">3| " + RESET
+                /*25 1/2*/ WHITE_BRIGHT + "   |     |  |   |  " + BLUE_BRIGHT + ">1| " + RESET,
+                /*26 1/2*/ WHITE_BRIGHT + "   |-    |  |   |  " + BLUE_BRIGHT + ">2| " + RESET,
+                /*27 1/2*/ GREEN + "   _ _" + WHITE_BRIGHT+ "   |  |   |  " + BLUE_BRIGHT + ">3| " + RESET
         };
 
         String[] rightOfBoardCastleArt = {
-                /*25 2/2*/ BLUE_BRIGHT + "| " + WHITE + "  |  |  |     |" + RESET,
-                /*26 2/2*/ BLUE_BRIGHT + "| " + WHITE + "  |  |  |    -|" + RESET,
-                /*27 2/2*/ BLUE_BRIGHT + "| " + WHITE + "  |  |  |  _  |" + RESET
+                /*25 2/2*/ BLUE_BRIGHT + "| " + WHITE_BRIGHT + "  |  |  |     |" + RESET,
+                /*26 2/2*/ BLUE_BRIGHT + "| " + WHITE_BRIGHT + "  |  |  |    -|" + RESET,
+                /*27 2/2*/ BLUE_BRIGHT + "| " + WHITE_BRIGHT + "  |  |  |  _  |" + RESET
         };
 
         String[] lowerCastleArt = {
-                /*28*/ GREEN + "    '--~~__ " + WHITE +"|   |    " + BLUE_BRIGHT + "--------- " + WHITE + "  |  | " + GREEN + "_" + WHITE + "|" + GREEN + "_    " + WHITE + "|" + RESET,
+                /*28*/ GREEN + "    '--~~__ " + WHITE_BRIGHT +"|   |    " + BLUE_BRIGHT + "--------- " + WHITE_BRIGHT + "  |  | " + GREEN + "_" + WHITE_BRIGHT + "|" + GREEN + "_    " + WHITE_BRIGHT + "|" + RESET,
                 /*29*/ GREEN + "           ~---___________________---~   ~`---," + RESET,
                 /*30*/ GREEN + "                                               ~~----____-~" + RESET
         };
