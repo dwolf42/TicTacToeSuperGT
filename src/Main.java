@@ -1,10 +1,12 @@
 /*
  * 11.01.2022 - 1:13 p.m. - by Kabraxis Luvos
  */
+
 import java.util.Scanner;
 
 public class Main {
-    public static final String RE = "\033[0m"; // Reset
+
+    public static final String RE = "\033[31m"; // Reset
     public static final String BL = "\033[0;1"; // Black
     public static final String R = "\033[0;31m"; // Red
     public static final String G = "\033[0;32m"; // Green
