@@ -2,6 +2,9 @@
  * 11.01.2022 - 1:13 p.m. - by Kabraxis Luvos
  */
 import java.util.Scanner;
+import java.io.File;
+import java.io.PrintWriter;
+
 
 public class Main {
 
@@ -9,9 +12,6 @@ public class Main {
     static char currentPlayer = 'X';
 
     public static void main(String[] args) {
-        System.out.println("\033[0;91m" + "Hi, this is red");
-        System.out.print("\u001B[0m");
-        System.out.println("hi test if this will reset");
 
         char[][] board = {
                 // 1,1   1,2  1,3 <- locations entered by user
