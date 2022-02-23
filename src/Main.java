@@ -38,7 +38,7 @@ public class Main {
             /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
     };
 
-    String[] upperCastleArtFireworks1 = {
+    static String[] upperCastleArtFireworks1 = {
 
             /*00*/ "                           .",
             /*01*/ "                         _\\(/_  .:.",
