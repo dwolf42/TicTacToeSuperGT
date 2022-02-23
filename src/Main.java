@@ -138,7 +138,7 @@ public class Main {
 
         char winner = checkWinconditions(board);
 
-        printArrayBoardArt(board);
+        printArrayBoardArtGameRuns(board);
 
         if (winner == 'd') {
             printWinner("Draw", board);
@@ -169,7 +169,7 @@ public class Main {
         gameLoop(board);
     }
 
-    public static void printArrayBoardArt(char[][] board) {
+    public static void printArrayBoardArtGameRuns(char[][] board) {
 
         for (String s : upperCastleArtBasic) {
             System.out.println(s);
