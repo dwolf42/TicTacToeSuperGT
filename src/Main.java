@@ -2,14 +2,17 @@
  * 11.01.2022 - 1:13 p.m. - by Kabraxis Luvos
  */
 import java.util.Scanner;
+import java.util.Arrays;
 
 
 public class Main {
+    // Defines which row aka. castle art to print.
+    static int castleArtRow = 0; // Default 0, 1 & 2 only for winner's cheer.
 
-    static String[][] castleDynamicArt = {
+    static String[] castleArtDynamicCloud = {
 
             // Castle Art: Basic - Row 0
-            {
+
                     /*00*/ "         ___",
                     /*01*/ "      __(_  )___",
                     /*02*/ "    _(          )",
@@ -35,11 +38,12 @@ public class Main {
                     /*22*/ "   | |_|   .     /              \\    .   |_| |                       {).//",
                     /*23*/ "   |     |: ,   |    * 1 2 3 *   |  , :|     |                   c==// )",
                     /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
-            },
+            };
 
+    static String[] castleArtDynamicFireworksA = {
             // Castle Art: Fireworks 1 - Row 1
             // Contains: Upper Castle part & Horse's upper head, Knight's upper body & sword
-            {
+
                     /*00*/ "                           .",
                     /*01*/ "                         _\\(/_  .:.",
                     /*02*/ "       .''.      .       ./)\\,  ':'",
@@ -65,11 +69,12 @@ public class Main {
                     /*22*/ "   | |_|   .     /              \\    .   |_| |                    \\\\.{)",
                     /*23*/ "   |     |: ,   |    * 1 2 3 *   |  , :|     |                   c==// )",
                     /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
-            },
+            };
 
+    static String[] castleArtDynamicFireworksB = {
             // Castle Art: Fireworks 2 - Row 2
             // Contains: Upper Castle part & Horse's upper head, Knight's upper body & sword
-            {
+
                     /*00*/ "                         .",
                     /*01*/ "      . .               -:-",
                     /*02*/ "    .'.:,'.              '\\",
@@ -95,36 +100,37 @@ public class Main {
                     /*22*/ "   | |_|   .     /              \\    .   |_| |                    \\\\.{)",
                     /*23*/ "   |     |: ,   |    * 1 2 3 *   |  , :|     |                   c==// )",
                     /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
-            },
-    };
+            };
 
-    static String[][] castleFixedArt = {
+
+    static String[] castleArtFixedLeftSide = {
 
             // Castle Art: Left side - Row 0
             // Contains: Left Castle wall & Board rows
-            {
+
                     /*25 1/2*/ "   |     |  |   |  >1| ",
                     /*26 1/2*/ "   |-    |  |   |  >2| ",
                     /*27 1/2*/ "   _ _   |  |   |  >3| "
-            },
+            };
 
+    static String[] castleArtFixedRightSide = {
             // Castle Art: Right side - Row 1
             // Contains: Right Castle wall, Horse's body, Knight's legs & Bottom part
-            {
+
                     /*25 2/2*/ "|   |  |  |     |          /' _,  /._/|__K",
                     /*26 2/2*/ "|   |  |  |    -|          `~~ -,   // '~~~\\;;,",
                     /*27 2/2*/ "|   |  |  |  _  |             ,_( _||_..\\ L| ';;"
-            },
+            };
 
+    static String[] castleArtFixedLowerSide = {
             // Castle Art: Lower side - Row 2
             // Contains: Castle Gate, Way to Castle, Horse's legs
-            {
+
                     /*28*/ "    '--~~__ |   |    ---------   |  | _|_    |            / ~|/ ~' `\\<\\>   ;;",
                     /*29*/ "           ~---___________________---~   ~`---,          /   |      /  |   ;",
                     /*30*/ "                                               ~~----____\"~--|~~----/__|____---____-~---~~--",
                     /*31*/ "                  ~----__                                    \"     \"   \"",
                     /*32*/ "                        `~~----____-~---~~----____-~"
-            }
     };
 
     public static void main(String[] args) {
@@ -146,25 +152,25 @@ public class Main {
 
     public static void printArrayBoardGameEnds(char[][] board) {
 
-        int castleArtRow = 0;
-        for (int i = 0; i <= castleArtRow; i++) {
-            for (int j =0; j < castleDynamicArt[1].length; j++) {
-                System.out.println(castleDynamicArt[i][j]);
+        // Prints castleArtDynamicCloud
+        for (String castleArt : castleArtDynamicCloud ) {
+            System.out.println(castleArt);
             }
-        }
 
+        // Prints the game board
         for (int i = 0; i < board.length; i++) {
-            System.out.print(castleFixedArt[0]);
+           System.out.print(castleArtFixedLeftSide[i]); //
             for (int j = 0; j < board[1].length; j++) {
                 System.out.print(board[i][j] + " ");
             }
-            System.out.print(castleFixedArt[1]);
+            System.out.print(castleArtFixedRightSide[i]);
             System.out.println();
         }
 
-        for (int i = 0; i <- String s : lowerCastleArt) {
-            System.out.println(s);
+        for (String castleArt : castleArtFixedLowerSide) {
+            System.out.println(castleArt);
         }
+
 
 
     }
