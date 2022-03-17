@@ -2,6 +2,7 @@
  * 11.01.2022 - 1:13 p.m. - by Kabraxis Luvos
  */
 
+import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
 public class Main {
@@ -129,11 +130,11 @@ public class Main {
             /*32*/ "                        `~~----____-~---~~----____-~"
     };
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         char[][] board = {
                 // 1,1   1,2  1,3 <- locations entered by user
                 // 0,0   0,1  0,2 <- locations by index counting of an array
-                {'_', '_', '_'},
+                {'X', 'X', 'X'},
                 // 2,1   2,2  2,3
                 // 1,0   1,1  1,2
                 {'_', '_', '_'},
@@ -145,7 +146,7 @@ public class Main {
         gameLoop(board);
     }
 
-    public static void gameLoop(char[][] board) {
+    public static void gameLoop(char[][] board) throws InterruptedException {
         Scanner pauseGame = new Scanner(System.in);
 
         char winner = checkWinconditions(board);
@@ -398,7 +399,7 @@ public class Main {
         return ' ';
     }
 
-    public static void printWinner(String fromGameLoopWinningLetter, char[][] board) {
+    public static void printWinner(String fromGameLoopWinningLetter, char[][] board) throws InterruptedException {
         for (String castleArt : castleArtDynamicFireworksA) {
             System.out.println(castleArt);
         }
@@ -419,6 +420,14 @@ public class Main {
         // Prints out who is the winner
         System.out.println(fromGameLoopWinningLetter);
 
+        // This area is for style purposes
+        TimeUnit.SECONDS.sleep(2);
+
+        int clearLines = 24;
+        for (int i = 0; i <= clearLines; i++) {
+            System.out.println();
+        }
+        //
         for (String castleArt : castleArtDynamicFireworksB) {
             System.out.println(castleArt);
         }
