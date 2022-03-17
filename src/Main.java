@@ -134,7 +134,7 @@ public class Main {
         char[][] board = {
                 // 1,1   1,2  1,3 <- locations entered by user
                 // 0,0   0,1  0,2 <- locations by index counting of an array
-                {'X', 'X', 'X'},
+                {'_', '_', '_'},
                 // 2,1   2,2  2,3
                 // 1,0   1,1  1,2
                 {'_', '_', '_'},
@@ -143,7 +143,14 @@ public class Main {
                 {'_', '_', '_'}
         };
 
+        howToPlay();
+
         gameLoop(board);
+    }
+
+    public static void howToPlay() {
+
+
     }
 
     public static void gameLoop(char[][] board) throws InterruptedException {
