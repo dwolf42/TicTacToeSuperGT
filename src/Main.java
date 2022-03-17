@@ -163,24 +163,14 @@ public class Main {
         for (String castleArt : castleArtFixedLowerSide) {
             System.out.println(castleArt);
         }
+
+        changeBoard(board);
     }
 
     public static void changeBoard(char[][] board) {
         board[0][2] = 'Z';
-        printChangedArrayBoard(board);
-
-    }
-
-    public static void printChangedArrayBoard(char[][] board) {
-        for (int i = 0; i < board.length; i++) {
-            System.out.print(castleArtFixedLeftSide[i]); //
-            for (int j = 0; j < board[1].length; j++) {
-                System.out.print(board[i][j] + " ");
-            }
-            System.out.print(castleArtFixedRightSide[i]);
-            System.out.println();
-        }
         printEndOfGame(board);
+
     }
 
     public static void printEndOfGame(char[][] board) {
