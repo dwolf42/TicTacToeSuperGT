@@ -206,8 +206,6 @@ public class Main {
         for (String castleArt : castleArtFixedLowerSide) {
             System.out.println(castleArt);
         }
-
-       // changeBoard(board);
     }
 
     // User's input of coordinates is a string that will be checked if it contains
@@ -427,14 +425,8 @@ public class Main {
         // Prints out who is the winner
         System.out.println(fromGameLoopWinningLetter);
 
-        // This area is for style purposes
-        TimeUnit.SECONDS.sleep(2);
+        pauseAndClearScreen(2, 100);
 
-        int clearLines = 24;
-        for (int i = 0; i <= clearLines; i++) {
-            System.out.println();
-        }
-        //
         for (String castleArt : castleArtDynamicFireworksB) {
             System.out.println(castleArt);
         }
@@ -454,5 +446,16 @@ public class Main {
 
         // Prints out who is the winner
         System.out.println(fromGameLoopWinningLetter);
+    }
+
+    // This area is for style purposes. It's used to pause the game for n seconds and/or clear the screen
+    public static void pauseAndClearScreen(int pauseSeconds, int clearLines) throws InterruptedException {
+
+        TimeUnit.SECONDS.sleep(pauseSeconds);
+
+        for (int i = 0; i <= clearLines; i++) {
+            System.out.println();
+        }
+
     }
 }
