@@ -9,126 +9,134 @@ public class Main {
     // Game always starts with player X
     static char currentPlayer = 'X';
 
-    static String[] castleArtDynamicCloud = {
-            // Castle Art: Cloud
-            // Contains: Upper castle part, cloud & horse's upper head, knight's upper body & sword
-            /*00*/ "         ___",
-            /*01*/ "      __(_  )___",
-            /*02*/ "    _(          )",
-            /*03*/ "   (     )-----´        |----______________,",
-            /*04*/ "    `---'               |    Kabraxis '22 /",
-            /*05*/ "                        |---____________/",
-            /*06*/ "                        |",
-            /*07*/ "                        X                     \\,/",
-            /*08*/ "                       /~\\",
-            /*09*/ "                      /~~~\\                        /`\\",
-            /*10*/ "                     /~~~~~\\",
-            /*11*/ "      |---____,     /~~~~~~~\\             |---____,",
-            /*12*/ "      |--____/     /~~~~~~~~~\\            |--____/",
-            /*13*/ "      |           /~~~~~~~~~~~\\           |",
-            /*14*/ "      X           |     .   .:|           X",
-            /*15*/ "     /~\\          |   _   _   |          /~\\",
-            /*16*/ "    /~~~\\         |  |+| |+|  |         /~~~\\",
-            /*17*/ "   /~~~~~\\        |  |_| |_|  |        /~~~~~\\",
-            /*18*/ "   | :   |      __|           |__      | :   |                           |",
-            /*19*/ "   |.:   |____| ; .           . ; |____|.:   |                           |",
-            /*20*/ "   |  _    .        __________       .    _  |                           |",
-            /*21*/ "   | |+| |.  ==   /            \\  ==  .| |+| |                        / -+-",
-            /*22*/ "   | |_|   .     /              \\    .   |_| |                       {).//",
-            /*23*/ "   |     |: ,   |    * 1 2 3 *   |  , :|     |                   c==// )",
-            /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
-    };
+    public static String[] castleArtDynamicCloud() {
+        // Castle Art: Cloud
+        // Contains: Upper castle part, cloud & horse's upper head, knight's upper body & sword
+        return new String[]{
+                /*00*/ "         ___",
+                /*01*/ "      __(_  )___",
+                /*02*/ "    _(          )",
+                /*03*/ "   (     )-----´        |----______________,",
+                /*04*/ "    `---'               |    Kabraxis '22 /",
+                /*05*/ "                        |---____________/",
+                /*06*/ "                        |",
+                /*07*/ "                        X                     \\,/",
+                /*08*/ "                       /~\\",
+                /*09*/ "                      /~~~\\                        /`\\",
+                /*10*/ "                     /~~~~~\\",
+                /*11*/ "      |---____,     /~~~~~~~\\             |---____,",
+                /*12*/ "      |--____/     /~~~~~~~~~\\            |--____/",
+                /*13*/ "      |           /~~~~~~~~~~~\\           |",
+                /*14*/ "      X           |     .   .:|           X",
+                /*15*/ "     /~\\          |   _   _   |          /~\\",
+                /*16*/ "    /~~~\\         |  |+| |+|  |         /~~~\\",
+                /*17*/ "   /~~~~~\\        |  |_| |_|  |        /~~~~~\\",
+                /*18*/ "   | :   |      __|           |__      | :   |                           |",
+                /*19*/ "   |.:   |____| ; .           . ; |____|.:   |                           |",
+                /*20*/ "   |  _    .        __________       .    _  |                           |",
+                /*21*/ "   | |+| |.  ==   /            \\  ==  .| |+| |                        / -+-",
+                /*22*/ "   | |_|   .     /              \\    .   |_| |                       {).//",
+                /*23*/ "   |     |: ,   |    * 1 2 3 *   |  , :|     |                   c==// )",
+                /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
+        };
+    }
 
-    static String[] castleArtDynamicFireworksA = {
-            // Castle Art: Fireworks A
-            // Contains: Upper castle part & horse's upper head, knight's upper body & sword
 
-            /*00*/ "                           .",
-            /*01*/ "                         _\\(/_  .:.",
-            /*02*/ "       .''.      .       ./)\\,  ':'",
-            /*03*/ "      :_\\/_:   _\\(/_    |----______________,    .''.",
-            /*04*/ "  .''.: /\\ :   ./)\\     |    Kabraxis '22 /    :_\\/_:     .",
-            /*05*/ " :_\\/_:'.:::.      `    |---____________/      : /\\ :  .'.:.'.",
-            /*06*/ " : /\\ : :::::       `   |       `            :  '..'.  -=:o:=-",
-            /*07*/ "  '..'  ':::'        `  X        `        '.\\'/.' _\\(/_'.':'.'",
-            /*08*/ "      ' ,              /~\\                -= o =-  /)\\  , '",
-            /*09*/ "       '        .:.   /~~~\\       *''*    .'/.\\'.   '  ,",
-            /*10*/ "       '        ':'  /~~~~~\\  .:.*_\\/_*     :      ' ,",
-            /*11*/ "      |---____,  '  /~~~~~~~\\ ':'* /\\ *   |---____, ',",
-            /*12*/ "      |--____/   ' /~~~~~~~~~\\    *''*    |--____/  ,",
-            /*13*/ "      |          '/~~~~~~~~~~~\\    ,      |",
-            /*14*/ "      X           |     .   .:|   ,       X",
-            /*15*/ "     /~\\          |   _   _   |  ,       /~\\     .* *.",
-            /*16*/ "    /~~~\\         |  |+| |+|  |         /~~~\\    *. .*",
-            /*17*/ "   /~~~~~\\        |  |_| |_|  |        /~~~~~\\     *",
-            /*18*/ "   | :   |      __|           |__      | :   |    ,           \\",
-            /*19*/ "   |.:   |____| ; .           . ; |____|.:   |   ,             \\",
-            /*20*/ "   |  _    .        __________       .    _  |  ,               \\",
-            /*21*/ "   | |+| |.  ==   /            \\  ==  .| |+| |                   +    /",
-            /*22*/ "   | |_|   .     /              \\    .   |_| |                    \\\\.{)",
-            /*23*/ "   |     |: ,   |    * 1 2 3 *   |  , :|     |                   c==// )",
-            /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
-    };
+    public static String[] castleArtDynamicFireworksA() {
+        // Castle Art: Fireworks A
+        // Contains: Upper castle part & horse's upper head, knight's upper body & sword
+        return new String[]{
+                /*00*/"                           .",
+                /*01*/ "                         _\\(/_  .:.",
+                /*02*/ "       .''.      .       ./)\\,  ':'",
+                /*03*/ "      :_\\/_:   _\\(/_    |----______________,    .''.",
+                /*04*/ "  .''.: /\\ :   ./)\\     |    Kabraxis '22 /    :_\\/_:     .",
+                /*05*/ " :_\\/_:'.:::.      `    |---____________/      : /\\ :  .'.:.'.",
+                /*06*/ " : /\\ : :::::       `   |       `            :  '..'.  -=:o:=-",
+                /*07*/ "  '..'  ':::'        `  X        `        '.\\'/.' _\\(/_'.':'.'",
+                /*08*/ "      ' ,              /~\\                -= o =-  /)\\  , '",
+                /*09*/ "       '        .:.   /~~~\\       *''*    .'/.\\'.   '  ,",
+                /*10*/ "       '        ':'  /~~~~~\\  .:.*_\\/_*     :      ' ,",
+                /*11*/ "      |---____,  '  /~~~~~~~\\ ':'* /\\ *   |---____, ',",
+                /*12*/ "      |--____/   ' /~~~~~~~~~\\    *''*    |--____/  ,",
+                /*13*/ "      |          '/~~~~~~~~~~~\\    ,      |",
+                /*14*/ "      X           |     .   .:|   ,       X",
+                /*15*/ "     /~\\          |   _   _   |  ,       /~\\     .* *.",
+                /*16*/ "    /~~~\\         |  |+| |+|  |         /~~~\\    *. .*",
+                /*17*/ "   /~~~~~\\        |  |_| |_|  |        /~~~~~\\     *",
+                /*18*/ "   | :   |      __|           |__      | :   |    ,           \\",
+                /*19*/ "   |.:   |____| ; .           . ; |____|.:   |   ,             \\",
+                /*20*/ "   |  _    .        __________       .    _  |  ,               \\",
+                /*21*/ "   | |+| |.  ==   /            \\  ==  .| |+| |                   +    /",
+                /*22*/ "   | |_|   .     /              \\    .   |_| |                    \\\\.{)",
+                /*23*/ "   |     |: ,   |    * 1 2 3 *   |  , :|     |                   c==// )",
+                /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
+        };
+    }
 
-    static String[] castleArtDynamicFireworksB = {
-            // Castle Art: Fireworks B
-            // Contains: Upper castle part & horse's upper head, knight's upper body & sword
+    public static String[] castleArtDynamicFireworksB() {
+        // Castle Art: Fireworks B
+        // Contains: Upper castle part & horse's upper head, knight's upper body & sword
+        return new String[]{
+                /*00*/ "                         .",
+                /*01*/ "      . .               -:-",
+                /*02*/ "    .'.:,'.              '\\",
+                /*03*/ "    .'.;.`.     .  .  . |----______________,   :",
+                /*04*/ "     `.:.'     ._. ! ._.|    Kabraxis '22 / '.\\'/.'",
+                /*05*/ "                ._\\!/_. |---____________/   -= o =-",
+                /*06*/ "   .'.;.`.       . ! .  |                   .'/.\\'.",
+                /*07*/ "    `,:.'          .    X                      :",
+                /*08*/ "     ,'            .   /~\\      .  .  .",
+                /*09*/ "    ,              .  /~~~\\    . \\ | / .",
+                /*10*/ "   ,                 /~~~~~\\   .__\\:/__.",
+                /*11*/ "      |---____,     /~~~~~~~\\    .';`.    |---____,",
+                /*12*/ "      |--____/     /~~~~~~~~~\\    ,       |--____/",
+                /*13*/ "      |           /~~~~~~~~~~~\\  ,        |",
+                /*14*/ "      X     .     |     .   .:|   ,.,     X",
+                /*15*/ "     /~\\   -:-    |   _   _   |  ._!_.   /~\\",
+                /*16*/ "    /~~~\\   ' .   |  |+| |+|  |    ;    /~~~\\",
+                /*17*/ "   /~~~~~\\     \\  |  |_| |_|  |        /~~~~~\\     . ' .",
+                /*18*/ "   | :   |      __|           |__      | :   |      .:.       \\",
+                /*19*/ "   |.:   |____| ; .           . ; |____|.:   |      '          \\",
+                /*20*/ "   |  _    .        __________       .    _  |     /            \\",
+                /*21*/ "   | |+| |.  ==   /            \\  ==  .| |+| |                   +    /",
+                /*22*/ "   | |_|   .     /              \\    .   |_| |                    \\\\.{)",
+                /*23*/ "   |     |: ,   |    * 1 2 3 *   |  , :|     |                   c==// )",
+                /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
+        };
+    }
 
-            /*00*/ "                         .",
-            /*01*/ "      . .               -:-",
-            /*02*/ "    .'.:,'.              '\\",
-            /*03*/ "    .'.;.`.     .  .  . |----______________,   :",
-            /*04*/ "     `.:.'     ._. ! ._.|    Kabraxis '22 / '.\\'/.'",
-            /*05*/ "                ._\\!/_. |---____________/   -= o =-",
-            /*06*/ "   .'.;.`.       . ! .  |                   .'/.\\'.",
-            /*07*/ "    `,:.'          .    X                      :",
-            /*08*/ "     ,'            .   /~\\      .  .  .",
-            /*09*/ "    ,              .  /~~~\\    . \\ | / .",
-            /*10*/ "   ,                 /~~~~~\\   .__\\:/__.",
-            /*11*/ "      |---____,     /~~~~~~~\\    .';`.    |---____,",
-            /*12*/ "      |--____/     /~~~~~~~~~\\    ,       |--____/",
-            /*13*/ "      |           /~~~~~~~~~~~\\  ,        |",
-            /*14*/ "      X     .     |     .   .:|   ,.,     X",
-            /*15*/ "     /~\\   -:-    |   _   _   |  ._!_.   /~\\",
-            /*16*/ "    /~~~\\   ' .   |  |+| |+|  |    ;    /~~~\\",
-            /*17*/ "   /~~~~~\\     \\  |  |_| |_|  |        /~~~~~\\     . ' .",
-            /*18*/ "   | :   |      __|           |__      | :   |      .:.       \\",
-            /*19*/ "   |.:   |____| ; .           . ; |____|.:   |      '          \\",
-            /*20*/ "   |  _    .        __________       .    _  |     /            \\",
-            /*21*/ "   | |+| |.  ==   /            \\  ==  .| |+| |                   +    /",
-            /*22*/ "   | |_|   .     /              \\    .   |_| |                    \\\\.{)",
-            /*23*/ "   |     |: ,   |    * 1 2 3 *   |  , :|     |                   c==// )",
-            /*24*/ "   | .   |  |   |    ---------   |  |  |   . |           -^~~-_./   | |"
-    };
+    public static String[] castleArtFixedLeftSide() {
+        // Castle Art: Left side
+        // Contains: Left castle wall & board rows
+        return new String[]{
+                /*25 1/2*/ "   |     |  |   |  >1| ",
+                /*26 1/2*/ "   |-    |  |   |  >2| ",
+                /*27 1/2*/ "   _ _   |  |   |  >3| "
+        };
+    }
 
-    static String[] castleArtFixedLeftSide = {
-            // Castle Art: Left side
-            // Contains: Left castle wall & board rows
+    public static String[] castleArtFixedRightSide() {
+        // Castle Art: Right side
+        // Contains: Right castle wall, horse's body, knight's legs & bottom part
+        return new String[]{
+                /*25 2/2*/ "|   |  |  |     |          /' _,  /._/|__K",
+                /*26 2/2*/ "|   |  |  |    -|          `~~ -,   // '~~~\\;;,",
+                /*27 2/2*/ "|   |  |  |  _  |             ,_( _||_..\\ L| ';;"
+        };
+    }
 
-            /*25 1/2*/ "   |     |  |   |  >1| ",
-            /*26 1/2*/ "   |-    |  |   |  >2| ",
-            /*27 1/2*/ "   _ _   |  |   |  >3| "
-    };
-
-    static String[] castleArtFixedRightSide = {
-            // Castle Art: Right side
-            // Contains: Right castle wall, horse's body, knight's legs & bottom part
-
-            /*25 2/2*/ "|   |  |  |     |          /' _,  /._/|__K",
-            /*26 2/2*/ "|   |  |  |    -|          `~~ -,   // '~~~\\;;,",
-            /*27 2/2*/ "|   |  |  |  _  |             ,_( _||_..\\ L| ';;"
-    };
-
-    static String[] castleArtFixedLowerSide = {
-            // Castle Art: Lower side
-            // Contains: Castle gate, way to castle, horse's legs
-
-            /*28*/ "    '--~~__ |   |    ---------   |  | _|_    |            / ~|/ ~' `\\<\\>   ;;",
-            /*29*/ "           ~---___________________---~   ~`---,          /   |      /  |   ;",
-            /*30*/ "                                               ~~----____\"~--|~~----/__|____---____-~---~~--",
-            /*31*/ "                  ~----__                                    \"     \"   \"",
-            /*32*/ "                        `~~----____-~---~~----____-~"
-    };
+    public static String[] castleArtFixedLowerSide() {
+        // Castle Art: Lower side
+        // Contains: Castle gate, way to castle, horse's legs
+        return new String[]{
+                /*28*/ "    '--~~__ |   |    ---------   |  | _|_    |            / ~|/ ~' `\\<\\>   ;;",
+                /*29*/ "           ~---___________________---~   ~`---,          /   |      /  |   ;",
+                /*30*/ "                                               ~~----____\"~--|~~----/__|____---____-~---~~--",
+                /*31*/ "                  ~----__                                    \"     \"   \"",
+                /*32*/ "                        `~~----____-~---~~----____-~"
+        };
+    }
 
     public static void main(String[] args) throws InterruptedException {
         char[][] board = {
@@ -190,20 +198,20 @@ public class Main {
     }
 
     public static void printArrayBoardArtGameRuns(char[][] board) {
-        for (String castleArt : castleArtDynamicCloud) {
+        for (String castleArt : castleArtDynamicCloud()) {
             System.out.println(castleArt);
         }
 
         for (int i = 0; i < board.length; i++) {
-            System.out.print(castleArtFixedLeftSide[i]); //
+            System.out.print(castleArtFixedLeftSide()[i]); //
             for (int j = 0; j < board[1].length; j++) {
                 System.out.print(board[i][j] + " ");
             }
-            System.out.print(castleArtFixedRightSide[i]);
+            System.out.print(castleArtFixedRightSide()[i]);
             System.out.println();
         }
 
-        for (String castleArt : castleArtFixedLowerSide) {
+        for (String castleArt : castleArtFixedLowerSide()) {
             System.out.println(castleArt);
         }
     }
@@ -405,20 +413,20 @@ public class Main {
     }
 
     public static void printWinner(String fromGameLoopWinningLetter, char[][] board) throws InterruptedException {
-        for (String castleArt : castleArtDynamicFireworksA) {
+        for (String castleArt : castleArtDynamicFireworksA()) {
             System.out.println(castleArt);
         }
 
         for (int i = 0; i < board.length; i++) {
-            System.out.print(castleArtFixedLeftSide[i]); //
+            System.out.print(castleArtFixedLeftSide()[i]); //
             for (int j = 0; j < board[1].length; j++) {
                 System.out.print(board[i][j] + " ");
             }
-            System.out.print(castleArtFixedRightSide[i]);
+            System.out.print(castleArtFixedRightSide()[i]);
             System.out.println();
         }
 
-        for (String castleArt : castleArtFixedLowerSide) {
+        for (String castleArt : castleArtFixedLowerSide()) {
             System.out.println(castleArt);
         }
 
@@ -427,20 +435,20 @@ public class Main {
 
         pauseAndClearScreen(2, 100);
 
-        for (String castleArt : castleArtDynamicFireworksB) {
+        for (String castleArt : castleArtDynamicFireworksB()) {
             System.out.println(castleArt);
         }
 
         for (int i = 0; i < board.length; i++) {
-            System.out.print(castleArtFixedLeftSide[i]); //
+            System.out.print(castleArtFixedLeftSide()[i]); //
             for (int j = 0; j < board[1].length; j++) {
                 System.out.print(board[i][j] + " ");
             }
-            System.out.print(castleArtFixedRightSide[i]);
+            System.out.print(castleArtFixedRightSide()[i]);
             System.out.println();
         }
 
-        for (String castleArt : castleArtFixedLowerSide) {
+        for (String castleArt : castleArtFixedLowerSide()) {
             System.out.println(castleArt);
         }
 
