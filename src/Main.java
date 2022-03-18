@@ -153,31 +153,41 @@ public class Main {
                 {'_', '_', '_'}
         };
 
-        howToPlay();
-
+        howToPlay(board);
         gameLoop(board);
     }
 
-    public static void howToPlay() throws InterruptedException {
+    public static void howToPlay(char[][] board) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         String alignSpacing = "                    ";
         pauseAndClearScreen(0, 5);
         System.out.println(alignSpacing + "Kabraxis: Hi, for the best experience possible, please now enlarge this window to fullscreen mode...");
-        pauseAndClearScreen(8, 0);
-        System.out.println("");
+        pauseAndClearScreen(8, 1);
         System.out.println("Press ENTER key...");
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
 
+        String selection;
+        do {
+            System.out.println(alignSpacing + "New here? Learn -~+~°: How to play °~+~- : Press 1 and hit ENTER");
+            pauseAndClearScreen(0, 1);
+            System.out.println(alignSpacing + "Have you played already? -~+~°: Start the game °~+~- : Press 2 and hit ENTER");
+            selection = scanner.nextLine();
+        } while (selection == null || selection.trim().isEmpty() || !selection.matches(allowedInputPattern));
+
+        if (selection.equals("2")) {
+            gameLoop(board);
+        }
+
         printHowToBanner();
-        System.out.println("");
+        pauseAndClearScreen(0, 1);
         System.out.println(alignSpacing + "Hello and welcome to TicTacToe GT, by Kabraxis.");
         System.out.println(alignSpacing + "Here you will learn how to play the game.");
-        System.out.println("");
+        pauseAndClearScreen(0, 1);
         System.out.println(alignSpacing + "The game board will be this 3 x 3 square, where players");
         System.out.println(alignSpacing + "players may place their mark as X or O symbol,");
         System.out.println(alignSpacing + "to make a move each turn.");
-        System.out.println("");
+        pauseAndClearScreen(0, 1);
         System.out.println("                                      * 1 2 3 *");
         System.out.println("                                      ---------");
         System.out.println("                                    >1| _ _ _ |");
@@ -186,8 +196,7 @@ public class Main {
         System.out.println("                                      ---------");
 
 
-        pauseAndClearScreen(3, 0);
-        System.out.println("");
+        pauseAndClearScreen(3, 1);
         System.out.println("Press ENTER key...");
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
