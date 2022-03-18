@@ -156,9 +156,54 @@ public class Main {
         gameLoop(board);
     }
 
-    public static void howToPlay() {
+    public static void howToPlay() throws InterruptedException {
+        Scanner scanner = new Scanner(System.in);
+        String alignSpacing = "                    ";
+        pauseAndClearScreen(0, 5);
+        System.out.println(alignSpacing + "Kabraxis: Hi, for the best experience possible, please now enlarge this window to fullscreen mode...");
+        pauseAndClearScreen(8, 0);
+        System.out.println("");
+        System.out.println("Press ENTER key...");
+        scanner.nextLine();
+        pauseAndClearScreen(0, 100);
+
+        printHowToBanner();
+        System.out.println("");
+        System.out.println(alignSpacing + "Hello and welcome to TicTacToe GT, by Kabraxis.");
+        System.out.println(alignSpacing + "Here you will learn how to play the game.");
+        System.out.println("");
+        System.out.println(alignSpacing + "The game board will be this 3 x 3 square, where players");
+        System.out.println(alignSpacing + "players may place their mark as X or O symbol,");
+        System.out.println(alignSpacing + "to make a move each turn.");
+        System.out.println("");
+        System.out.println("                                      * 1 2 3 *");
+        System.out.println("                                      ---------");
+        System.out.println("                                    >1| _ _ _ |");
+        System.out.println("                                    >2| _ _ _ |");
+        System.out.println("                                    >3| _ _ _ |");
+        System.out.println("                                      ---------");
 
 
+        pauseAndClearScreen(3, 0);
+        System.out.println("");
+        System.out.println("Press ENTER key...");
+        scanner.nextLine();
+        pauseAndClearScreen(0, 100);
+    }
+
+    public static void printHowToBanner() {
+        String[] howToBanner = {
+                /*00*/"                    ________________________________________________",
+                /*00*/"           ________|      | |   __                 ___   __        |_______",
+                /*00*/"           \\       |      |_|  |  |   \\  /\\  /      |   |  |       |      /",
+                /*00*/"            \\      |      | |  |__|    \\/  \\/       |   |__|       |     /",
+                /*00*/"            /      |_______________________________________________|     \\",
+                /*00*/"           /__________)                                        (__________\\"
+        };
+
+        for (String symbols : howToBanner) {
+            System.out.println(symbols);
+        }
     }
 
     public static void gameLoop(char[][] board) throws InterruptedException {
