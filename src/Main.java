@@ -200,6 +200,36 @@ public class Main {
         System.out.println("Press ENTER key...");
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
+
+        printHowToBanner();
+        pauseAndClearScreen(0, 1);
+        System.out.println(alignSpacing + "First choose the row, indicated by the > symbols,");
+        System.out.println(alignSpacing + "followed by a number, like >1, >2, >3.");
+        pauseAndClearScreen(0, 1);
+        System.out.println(alignSpacing + "Now choose a column, it's the numbers at the top,");
+        System.out.println(alignSpacing + "starting with a * symbol.");
+        System.out.println(alignSpacing + "Enter the location where you want to place your symbol,");
+        System.out.println(alignSpacing + "and confirm by pressing ENTER key like this:");
+        System.out.println(alignSpacing + "1 1");
+        System.out.println(alignSpacing + "2 3");
+        System.out.println(alignSpacing + "3 1");
+        System.out.println(alignSpacing + "Please mind the required spaces between both numbers.");
+        pauseAndClearScreen(0, 1);
+        System.out.println("                                      * 1 2 3 *");
+        System.out.println("                                      ---------");
+        System.out.println("                                    >1| _ _ _ |");
+        System.out.println("                                    >2| _ _ _ |");
+        System.out.println("                                    >3| _ _ _ |");
+        System.out.println("                                      ---------");
+
+
+        pauseAndClearScreen(3, 1);
+        System.out.println("Press ENTER key...");
+        scanner.nextLine();
+        pauseAndClearScreen(0, 100);
+
+        System.out.println(alignSpacing + "That's it :) So now let's play, shall we?");
+        System.out.println("Press ENTER key...");
     }
 
     public static void printHowToBanner() {
