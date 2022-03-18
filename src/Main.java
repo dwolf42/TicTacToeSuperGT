@@ -9,6 +9,8 @@ public class Main {
     // Game always starts with player X
     static char currentPlayer = 'X';
 
+    static String allowedInputPattern = "([-+])?\\d+";
+
     public static String[] castleArtDynamicCloud() {
         // Castle Art: Cloud
         // Contains: Upper castle part, cloud & horse's upper head, knight's upper body & sword
@@ -267,7 +269,6 @@ public class Main {
     public static int[] getValidCoordinates(char[][] board) {
         Scanner scanner = new Scanner(System.in);
         // Only positive numbers are allowed.
-        String pattern = "([-+])?\\d+";
         printTurnMessage();
         String userInputToCheckBeforeSplit = scanner.nextLine();
 
@@ -281,7 +282,8 @@ public class Main {
 
         String[] coordinates = userInputToCheckBeforeSplit.split(" ");
         // Loops as long as the input doesn't match the pattern of only positive integers.
-        if (!coordinates[0].matches(pattern) || !coordinates[1].matches(pattern)) {
+        if ((coordinates[0] == null || coordinates[0].trim().isEmpty() || !coordinates[0].matches(allowedInputPattern) ||
+                coordinates[1] == null || coordinates[1].trim().isEmpty() || !coordinates[1].matches(allowedInputPattern))) {
             System.out.println("You should enter numbers!");
             return getValidCoordinates(board);
         }
@@ -503,7 +505,6 @@ public class Main {
 
     // This area is for style purposes. It's used to pause the game for n seconds and/or clear the screen
     public static void pauseAndClearScreen(int pauseSeconds, int clearLines) throws InterruptedException {
-
         TimeUnit.SECONDS.sleep(pauseSeconds);
 
         for (int i = 0; i <= clearLines; i++) {
