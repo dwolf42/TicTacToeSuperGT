@@ -140,6 +140,21 @@ public class Main {
         };
     }
 
+    public static void printHowToBanner() {
+        String[] howToBanner = {
+                /*00*/"                    ________________________________________________",
+                /*00*/"           ________|      | |   __                 ___   __        |_______",
+                /*00*/"           \\       |      |_|  |  |   \\  /\\  /      |   |  |       |      /",
+                /*00*/"            \\      |      | |  |__|    \\/  \\/       |   |__|       |     /",
+                /*00*/"            /      |_______________________________________________|     \\",
+                /*00*/"           /__________)                                        (__________\\"
+        };
+
+        for (String symbols : howToBanner) {
+            System.out.println(symbols);
+        }
+    }
+
     public static void main(String[] args) throws InterruptedException {
         char[][] board = {
                 // 1,1   1,2  1,3 <- locations entered by user
@@ -161,21 +176,24 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String alignSpacing = "                    ";
         pauseAndClearScreen(0, 5);
-        System.out.println(alignSpacing + "Kabraxis: Hi, for the best experience possible, please now enlarge this window to fullscreen mode...");
-        pauseAndClearScreen(8, 1);
+        System.out.println(alignSpacing + "Kabraxis: Hi, for the best experience possible, please now enlarge " +
+                "this window to fullscreen mode...");
+        pauseAndClearScreen(0, 1);
         System.out.println("Press ENTER key...");
         scanner.nextLine();
-        pauseAndClearScreen(0, 100);
 
         String selection;
         do {
+            pauseAndClearScreen(0, 100);
             System.out.println(alignSpacing + "New here? Learn -~+~°: How to play °~+~- : Press 1 and hit ENTER");
-            pauseAndClearScreen(0, 1);
-            System.out.println(alignSpacing + "Have you played already? -~+~°: Start the game °~+~- : Press 2 and hit ENTER");
+ /*pause must be changed to 8*/           pauseAndClearScreen(0, 1);
+            System.out.println(alignSpacing + "Have you played already? -~+~°: Start the game °~+~- :" +
+                    " Press 2 and hit ENTER");
             selection = scanner.nextLine();
-        } while (selection == null || selection.trim().isEmpty() || !selection.matches(allowedInputPattern));
+        } while (selection == null || selection.trim().isEmpty() || !selection.matches(allowedInputPattern)||
+                selection.length() > 1 /* || selection.charAt(0) > 2*/);
 
-        if (selection.equals("2")) {
+        if (selection.charAt(0) == 2) {
             gameLoop(board);
         }
 
@@ -184,7 +202,7 @@ public class Main {
         System.out.println(alignSpacing + "Hello and welcome to TicTacToe GT, by Kabraxis.");
         System.out.println(alignSpacing + "Here you will learn how to play the game.");
         pauseAndClearScreen(0, 1);
-        System.out.println(alignSpacing + "The game board will be this 3 x 3 square, where players");
+        System.out.println(alignSpacing + "The game board will be this 3 x 3 square, where");
         System.out.println(alignSpacing + "players may place their mark as X or O symbol,");
         System.out.println(alignSpacing + "to make a move each turn.");
         pauseAndClearScreen(0, 1);
@@ -204,7 +222,7 @@ public class Main {
         printHowToBanner();
         pauseAndClearScreen(0, 1);
         System.out.println(alignSpacing + "First choose the row, indicated by the > symbols,");
-        System.out.println(alignSpacing + "followed by a number, like >1, >2, >3.");
+        System.out.println(alignSpacing + "followed by a number - they look like >1, >2, >3.");
         pauseAndClearScreen(0, 1);
         System.out.println(alignSpacing + "Now choose a column, it's the numbers at the top,");
         System.out.println(alignSpacing + "starting with a * symbol.");
@@ -230,21 +248,6 @@ public class Main {
 
         System.out.println(alignSpacing + "That's it :) So now let's play, shall we?");
         System.out.println("Press ENTER key...");
-    }
-
-    public static void printHowToBanner() {
-        String[] howToBanner = {
-                /*00*/"                    ________________________________________________",
-                /*00*/"           ________|      | |   __                 ___   __        |_______",
-                /*00*/"           \\       |      |_|  |  |   \\  /\\  /      |   |  |       |      /",
-                /*00*/"            \\      |      | |  |__|    \\/  \\/       |   |__|       |     /",
-                /*00*/"            /      |_______________________________________________|     \\",
-                /*00*/"           /__________)                                        (__________\\"
-        };
-
-        for (String symbols : howToBanner) {
-            System.out.println(symbols);
-        }
     }
 
     public static void gameLoop(char[][] board) throws InterruptedException {
