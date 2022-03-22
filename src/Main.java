@@ -182,30 +182,35 @@ public class Main {
         System.out.println("Press ENTER key...");
         scanner.nextLine();
 
-        String selection;
+        int selection;
+
         do {
             pauseAndClearScreen(0, 100);
             System.out.println(alignSpacing + "New here? Learn -~+~°: How to play °~+~- : Press 1 and hit ENTER");
  /*pause must be changed to 8*/           pauseAndClearScreen(0, 1);
             System.out.println(alignSpacing + "Have you played already? -~+~°: Start the game °~+~- :" +
                     " Press 2 and hit ENTER");
-            selection = scanner.nextLine();
-        } while (selection == null || selection.trim().isEmpty() || !selection.matches(allowedInputPattern)||
-                selection.length() > 1 /* || selection.charAt(0) > 2*/);
+            while (!scanner.hasNextInt()) {
+                System.out.println("For how to play enter 1, to start the game, enter 2:");
+                scanner.next(); // clears scanner
+            }
+            selection = scanner.nextInt();
+        } while (selection > 2 || selection < 1);
 
-        if (selection.charAt(0) == 2) {
+        if (selection == 2) {
             gameLoop(board);
         }
 
+        pauseAndClearScreen(0, 100);
         printHowToBanner();
         pauseAndClearScreen(0, 1);
-        System.out.println(alignSpacing + "Hello and welcome to TicTacToe GT, by Kabraxis.");
-        System.out.println(alignSpacing + "Here you will learn how to play the game.");
-        pauseAndClearScreen(0, 1);
+        System.out.println("\n" + alignSpacing + "Hello and welcome to TicTacToe GT, by Kabraxis.");
+        System.out.println(alignSpacing + "Here you will learn how to play the game.\n");
+
         System.out.println(alignSpacing + "The game board will be this 3 x 3 square, where");
         System.out.println(alignSpacing + "players may place their mark as X or O symbol,");
-        System.out.println(alignSpacing + "to make a move each turn.");
-        pauseAndClearScreen(0, 1);
+        System.out.println(alignSpacing + "to make a move each turn.\n");
+
         System.out.println("                                      * 1 2 3 *");
         System.out.println("                                      ---------");
         System.out.println("                                    >1| _ _ _ |");
@@ -220,10 +225,9 @@ public class Main {
         pauseAndClearScreen(0, 100);
 
         printHowToBanner();
-        pauseAndClearScreen(0, 1);
-        System.out.println(alignSpacing + "First choose the row, indicated by the > symbols,");
-        System.out.println(alignSpacing + "followed by a number - they look like >1, >2, >3.");
-        pauseAndClearScreen(0, 1);
+        System.out.println("\n" + alignSpacing + "First choose the row, indicated by the > symbols,");
+        System.out.println(alignSpacing + "followed by a number - they look like >1, >2, >3.\n");
+
         System.out.println(alignSpacing + "Now choose a column, it's the numbers at the top,");
         System.out.println(alignSpacing + "starting with a * symbol.");
         System.out.println(alignSpacing + "Enter the location where you want to place your symbol,");
@@ -231,8 +235,8 @@ public class Main {
         System.out.println(alignSpacing + "1 1");
         System.out.println(alignSpacing + "2 3");
         System.out.println(alignSpacing + "3 1");
-        System.out.println(alignSpacing + "Please mind the required spaces between both numbers.");
-        pauseAndClearScreen(0, 1);
+        System.out.println(alignSpacing + "Please mind the required spaces between both numbers.\n");
+
         System.out.println("                                      * 1 2 3 *");
         System.out.println("                                      ---------");
         System.out.println("                                    >1| _ _ _ |");
