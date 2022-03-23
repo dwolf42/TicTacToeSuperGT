@@ -177,7 +177,7 @@ public class Main {
         pauseAndClearScreen(0, 5);
         System.out.println(alignSpacing + "Kabraxis: Hi, for the best experience possible, please now enlarge " +
                 "this window to fullscreen mode...");
-        pauseAndClearScreen(0, 1);
+        pauseAndClearScreen(5, 1);
         System.out.println("Press ENTER key...");
         scanner.nextLine();
 
@@ -190,7 +190,7 @@ public class Main {
                     " Press 2 and hit ENTER");
             pauseAndClearScreen(3, 1);
             while (!scanner.hasNextInt()) {
-                System.out.println("For how to play enter 1, to start the game, enter 2:");
+                System.out.println("\nFor how to play enter 1, to start the game, enter 2:\n");
                 scanner.next(); // clears scanner
             }
             selection = scanner.nextInt();
@@ -319,7 +319,7 @@ public class Main {
         if (userInputToCheckBeforeSplit.length() < 3 || userInputToCheckBeforeSplit.charAt(0) == 0 ||
                 userInputToCheckBeforeSplit.charAt(0) == ' ' || userInputToCheckBeforeSplit.charAt(2) == 0 ||
                 userInputToCheckBeforeSplit.charAt(2) == ' ') {
-            System.out.println("You must enter two numbers, separated by a space!");
+            System.out.println("Please enter two numbers, separated by a space.\n");
             return getValidCoordinates(board);
         }
 
@@ -329,7 +329,7 @@ public class Main {
                 !coordinates[0].matches(allowedInputPattern) ||
                 coordinates[1] == null || coordinates[1].trim().isEmpty() ||
                 !coordinates[1].matches(allowedInputPattern))) {
-            System.out.println("You should enter numbers!");
+            System.out.println("Please enter only numbers.\n");
             return getValidCoordinates(board);
         }
 
@@ -339,7 +339,7 @@ public class Main {
         // In case the user enters coordinates bigger than 3 or smaller than 0 an error will be shown and
         // the method will be reset and restarted.
         if (numCoordinates[0] > 3 || numCoordinates[0] < 1 || numCoordinates[1] > 3 || numCoordinates[1] < 1) {
-            System.out.println("Coordinates should be from 1 to 3!");
+            System.out.println("Coordinates should be from 1 to 3, separated by a space.\n");
             return getValidCoordinates(board);
         }
 
@@ -360,13 +360,13 @@ public class Main {
         if (board[getValidCoordinates[0] - 1][getValidCoordinates[1] - 1] == '_') {
             return true;
         } else {
-            System.out.println("This cell is occupied! Choose another one!");
+            System.out.println("This cell is occupied. You may choose another one.\n");
             return false;
         }
     }
 
     public static void printTurnMessage() {
-        System.out.println("Enter the coordinates:");
+        System.out.println("Enter the coordinates to place your symbol:\n");
     }
 
     public static void changePlayer() {
