@@ -43,7 +43,6 @@ public class Main {
         };
     }
 
-
     public static String[] castleArtDynamicFireworksA() {
         // Castle Art: Fireworks A
         // Contains: Upper castle part & horse's upper head, knight's upper body & sword
@@ -187,9 +186,9 @@ public class Main {
         do {
             pauseAndClearScreen(0, 100);
             System.out.println(alignSpacing + "New here? Learn -~+~°: How to play °~+~- : Press 1 and hit ENTER");
- /*pause must be changed to 8*/           pauseAndClearScreen(0, 1);
             System.out.println(alignSpacing + "Have you played already? -~+~°: Start the game °~+~- :" +
                     " Press 2 and hit ENTER");
+            pauseAndClearScreen(3, 1);
             while (!scanner.hasNextInt()) {
                 System.out.println("For how to play enter 1, to start the game, enter 2:");
                 scanner.next(); // clears scanner
@@ -218,7 +217,6 @@ public class Main {
         System.out.println("                                    >3| _ _ _ |");
         System.out.println("                                      ---------");
 
-
         pauseAndClearScreen(3, 1);
         System.out.println("Press ENTER key...");
         scanner.nextLine();
@@ -243,7 +241,6 @@ public class Main {
         System.out.println("                                    >2| _ _ _ |");
         System.out.println("                                    >3| _ _ _ |");
         System.out.println("                                      ---------");
-
 
         pauseAndClearScreen(3, 1);
         System.out.println("Press ENTER key...");
@@ -328,8 +325,10 @@ public class Main {
 
         String[] coordinates = userInputToCheckBeforeSplit.split(" ");
         // Loops as long as the input doesn't match the pattern of only positive integers.
-        if ((coordinates[0] == null || coordinates[0].trim().isEmpty() || !coordinates[0].matches(allowedInputPattern) ||
-                coordinates[1] == null || coordinates[1].trim().isEmpty() || !coordinates[1].matches(allowedInputPattern))) {
+        if ((coordinates[0] == null || coordinates[0].trim().isEmpty() ||
+                !coordinates[0].matches(allowedInputPattern) ||
+                coordinates[1] == null || coordinates[1].trim().isEmpty() ||
+                !coordinates[1].matches(allowedInputPattern))) {
             System.out.println("You should enter numbers!");
             return getValidCoordinates(board);
         }
@@ -391,10 +390,8 @@ public class Main {
         // --- Win conditions ---
 
         // >>> X win conditions <<<
-
         // True if the indexes that are building the diagonal line from top left to bottom right
         // or from top right to bottom left are "X"
-
         boolean xWinLeftDiagonal = board[0][0] == ('X') &&
                 board[1][1] == ('X') &&
                 board[2][2] == ('X');
@@ -430,7 +427,6 @@ public class Main {
                 board[2][2] == ('X');
 
         // >>> O win conditions <<<
-
         // True if the indexes that are building the diagonal line from top left to bottom right
         // or from top right to bottom left are "O"
         boolean oWinLeftDiagonal = board[0][0] == ('O') &&
@@ -556,6 +552,5 @@ public class Main {
         for (int i = 0; i <= clearLines; i++) {
             System.out.println();
         }
-
     }
 }
