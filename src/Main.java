@@ -502,6 +502,8 @@ public class Main {
     }
 
     public static void printWinner(String fromGameLoopWinningLetter, char[][] board) throws InterruptedException {
+        pauseAndClearScreen(2, 100);
+
         for (String castleArt : castleArtDynamicFireworksA()) {
             System.out.println(castleArt);
         }
