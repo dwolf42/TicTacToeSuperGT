@@ -188,9 +188,8 @@ public class Main {
             System.out.println(alignSpacing + "New here? Learn -~+~°: How to play °~+~- : Press 1 and hit ENTER");
             System.out.println(alignSpacing + "Have you played already? -~+~°: Start the game °~+~- :" +
                     " Press 2 and hit ENTER");
-            pauseAndClearScreen(3, 1);
             while (!scanner.hasNextInt()) {
-                System.out.println("\nFor how to play enter 1, to start the game, enter 2:\n");
+                System.out.println("\nFor a how to play enter 1, to start the game, enter 2:\n");
                 scanner.next(); // clears scanner
             }
             selection = scanner.nextInt();
@@ -218,22 +217,25 @@ public class Main {
         System.out.println("                                      ---------");
 
         pauseAndClearScreen(3, 1);
-        System.out.println("Press ENTER key...");
+        System.out.println("To continue press ENTER key...");
+        scanner.nextLine();
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
 
         printHowToBanner();
-        System.out.println("\n" + alignSpacing + "First choose the row, indicated by the > symbols,");
-        System.out.println(alignSpacing + "followed by a number - they look like >1, >2, >3.\n");
+        System.out.println("\n" + alignSpacing + "First choose a row, indicated by the > symbols,");
+        System.out.println(alignSpacing + "followed by a number - the rows look like this: >1, >2, >3.\n");
 
         System.out.println(alignSpacing + "Now choose a column, it's the numbers at the top,");
         System.out.println(alignSpacing + "starting with a * symbol.");
-        System.out.println(alignSpacing + "Enter the location where you want to place your symbol,");
-        System.out.println(alignSpacing + "and confirm by pressing ENTER key like this:");
+        System.out.println(alignSpacing + "Enter these numbers, as they represent the location");
+        System.out.println(alignSpacing + "where you want to place your symbol,");
+        System.out.println(alignSpacing + "and confirm by pressing the ENTER key.\n");
+        System.out.println(alignSpacing + "Look at these examples for better understanding:\n");
         System.out.println(alignSpacing + "1 1");
         System.out.println(alignSpacing + "2 3");
         System.out.println(alignSpacing + "3 1");
-        System.out.println(alignSpacing + "Please mind the required spaces between both numbers.\n");
+        System.out.println(alignSpacing + "\nPlease mind the required spaces between both numbers.\n");
 
         System.out.println("                                      * 1 2 3 *");
         System.out.println("                                      ---------");
@@ -243,12 +245,12 @@ public class Main {
         System.out.println("                                      ---------");
 
         pauseAndClearScreen(3, 1);
-        System.out.println("Press ENTER key...");
+        System.out.println("To continue press ENTER key...");
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
 
         System.out.println(alignSpacing + "That's it :) So now let's play, shall we?");
-        System.out.println("Press ENTER key...");
+        System.out.println("To continue press ENTER key...");
     }
 
     public static void gameLoop(char[][] board) throws InterruptedException {
