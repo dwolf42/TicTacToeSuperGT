@@ -187,9 +187,9 @@ public class Main {
 
         do {
             pauseAndClearScreen(0, 100);
-            System.out.println(alignSpacing + "New here? Learn -~+~°: How to play °~+~- : Press 1 and hit ENTER");
-            System.out.println(alignSpacing + "Have you played already? -~+~°: Start the game °~+~- :" +
-                    " Press 2 and hit ENTER");
+            System.out.println(alignSpacing + "Press 1 and ENTER for -~+~°: How to play :°~+~-");
+            System.out.println(alignSpacing + "Press 2 and ENTER to -~+~°: Start the game :°~+~-");
+            System.out.println(alignSpacing + "Press 3 and ENTER to -~+~°: View Credits :°~+~-");
             while (!scanner.hasNextInt()) {
                 System.out.println("\nFor a how to play enter 1, to start the game, enter 2:\n");
                 scanner.next(); // clears scanner
@@ -199,6 +199,13 @@ public class Main {
 
         if (selection == 2) {
             gameLoop(board);
+        }
+        if (selection == 3) {
+            showCredits();
+            pauseAndClearScreen(5, 1);
+            System.out.println("Press ENTER key...");
+            scanner.nextLine();
+            howToPlay(board);
         }
 
         pauseAndClearScreen(0, 100);
@@ -558,5 +565,39 @@ public class Main {
         for (int i = 0; i <= clearLines; i++) {
             System.out.println();
         }
+    }
+
+    public static void showCredits() throws InterruptedException {
+        String nameDecorationL = "-~+~°: ";
+        String nameDecorationR = " :°~+~-";
+
+        pauseAndClearScreen(0, 100);
+
+        String[] gameName = {
+
+                " _______ _   _______      _______          _____                        _____ _______ ",
+                "|__   __(_) |__   __|    |__   __|        / ____|                      / ____|__   __|",
+                "   | |   _  ___| | __ _  ___| | ___   ___| (___  _   _ _ __   ___ _ __| |  __   | |   ",
+                "   | |  | |/ __| |/ _` |/ __| |/ _ \\ / _ \\\\___ \\| | | | '_ \\ / _ \\ '__| | |_ |  | |   ",
+                "   | |  | | (__| | (_| | (__| | (_) |  __/____) | |_| | |_) |  __/ |  | |__| |  | |   ",
+                "   |_|  |_|\\___|_|\\__,_|\\___|_|\\___/ \\___|_____/ \\__,_| .__/ \\___|_|   \\_____|  |_|   ",
+                "                                                      | |                             ",
+                "                                                      |_|                             "
+        };
+
+        for (String sym : gameName){
+            System.out.println(sym);
+        }
+        System.out.println("\n" + alignSpacing + "Code, ASCII & Icon Art, Installer by:\n");
+        System.out.println(alignSpacing + nameDecorationL + "Kabraxis Luvos" + nameDecorationR);
+        System.out.println(alignSpacing + "Get in touch with me on github.com/Kabraxis\n");
+        System.out.println("\n" + alignSpacing + "Special thanks for the ASCII art inspiration to:\n");
+        System.out.println(alignSpacing + nameDecorationL + "Tua Xiong" + nameDecorationR);
+        System.out.println(alignSpacing + nameDecorationL + "Andreas Freise" + nameDecorationR);
+        System.out.println(alignSpacing + nameDecorationL + "T.L.G." + nameDecorationR);
+        System.out.println(alignSpacing + nameDecorationL + "The Gnome Castle" + nameDecorationR);
+        System.out.println(alignSpacing + nameDecorationL + "as well as some unknown artists" + nameDecorationR);
+        System.out.println(alignSpacing + nameDecorationL + "asciiart.eu" + nameDecorationR);
+        System.out.println(alignSpacing + nameDecorationL + "textkool.com" + nameDecorationR);
     }
 }
