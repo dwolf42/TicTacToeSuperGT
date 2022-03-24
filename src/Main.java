@@ -168,8 +168,18 @@ public class Main {
                 {'_', '_', '_'}
         };
 
+        welcomeScreen();
         howToPlay(board);
         gameLoop(board);
+    }
+
+    public static void welcomeScreen() throws InterruptedException  {
+        pauseAndClearScreen(0, 5);
+        System.out.println(alignSpacing + "Kabraxis: Hi, for the best experience possible, please now enlarge " +
+                "this window to fullscreen mode...");
+        pauseAndClearScreen(5, 1);
+        System.out.println("Press ENTER key...");
+        scanner.nextLine();
     }
 
     public static void howToPlay(char[][] board) throws InterruptedException {
@@ -185,7 +195,7 @@ public class Main {
                 scanner.next(); // clears scanner
             }
             selection = scanner.nextInt();
-        } while (selection > 2 || selection < 1);
+        } while (selection > 3 || selection < 1);
 
         if (selection == 2) {
             gameLoop(board);
