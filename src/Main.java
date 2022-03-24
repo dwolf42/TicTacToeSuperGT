@@ -178,7 +178,8 @@ public class Main {
         System.out.println(alignSpacing + "Kabraxis: Hi, for the best experience possible, please now enlarge " +
                 "this window to fullscreen mode...");
         pauseAndClearScreen(5, 1);
-        System.out.println("Press ENTER key...");
+        System.out.println("Press ENTER to continue...");
+        scanner.reset();
         scanner.nextLine();
     }
 
@@ -192,7 +193,7 @@ public class Main {
             System.out.println(alignSpacing + "Press 3 and ENTER to -~+~°: View Credits :°~+~-");
             while (!scanner.hasNextInt()) {
                 System.out.println("\nFor a how to play enter 1, to start the game, enter 2:\n");
-                scanner.next(); // clears scanner
+                scanner.reset(); // clears scanner
             }
             selection = scanner.nextInt();
         } while (selection > 3 || selection < 1);
@@ -201,11 +202,7 @@ public class Main {
             gameLoop(board);
         }
         if (selection == 3) {
-            showCredits();
-            pauseAndClearScreen(5, 1);
-            System.out.println("Press ENTER key...");
-            scanner.nextLine();
-            howToPlay(board);
+            showCredits(board);
         }
 
         pauseAndClearScreen(0, 100);
@@ -226,8 +223,8 @@ public class Main {
         System.out.println("                                      ---------");
 
         pauseAndClearScreen(3, 1);
-        System.out.println("To continue press ENTER key...");
-        scanner.nextLine();
+        System.out.println("Press ENTER to continue...");
+        scanner.reset();
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
 
@@ -254,12 +251,16 @@ public class Main {
         System.out.println("                                      ---------");
 
         pauseAndClearScreen(3, 1);
-        System.out.println("To continue press ENTER key...");
+        System.out.println("Press ENTER to continue...");
+        scanner.reset();
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
 
         System.out.println(alignSpacing + "That's it :) So now let's play, shall we?");
-        System.out.println("To continue press ENTER key...");
+        System.out.println("Press ENTER to continue...");
+        scanner.reset();
+        scanner.nextLine();
+        pauseAndClearScreen(0, 100);
     }
 
     public static void gameLoop(char[][] board) throws InterruptedException {
@@ -567,7 +568,7 @@ public class Main {
         }
     }
 
-    public static void showCredits() throws InterruptedException {
+    public static void showCredits(char[][] board) throws InterruptedException {
         String nameDecorationL = "-~+~°: ";
         String nameDecorationR = " :°~+~-";
 
@@ -599,5 +600,11 @@ public class Main {
         System.out.println(alignSpacing + nameDecorationL + "as well as some unknown artists" + nameDecorationR);
         System.out.println(alignSpacing + nameDecorationL + "asciiart.eu" + nameDecorationR);
         System.out.println(alignSpacing + nameDecorationL + "textkool.com" + nameDecorationR);
+
+        pauseAndClearScreen(5, 0);
+        System.out.println("Press ENTER to continue...");
+        scanner.reset();
+        scanner.nextLine();
+        howToPlay(board);
     }
 }
