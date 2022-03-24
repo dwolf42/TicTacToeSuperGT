@@ -8,8 +8,9 @@ import java.util.Scanner;
 public class Main {
     // Game always starts with player X
     static char currentPlayer = 'X';
-
     static String allowedInputPattern = "([-+])?\\d+";
+    static String alignSpacing = "                    ";
+    static Scanner scanner = new Scanner(System.in);
 
     public static String[] castleArtDynamicCloud() {
         // Castle Art: Cloud
@@ -172,15 +173,6 @@ public class Main {
     }
 
     public static void howToPlay(char[][] board) throws InterruptedException {
-        Scanner scanner = new Scanner(System.in);
-        String alignSpacing = "                    ";
-        pauseAndClearScreen(0, 5);
-        System.out.println(alignSpacing + "Kabraxis: Hi, for the best experience possible, please now enlarge " +
-                "this window to fullscreen mode...");
-        pauseAndClearScreen(5, 1);
-        System.out.println("Press ENTER key...");
-        scanner.nextLine();
-
         int selection;
 
         do {
