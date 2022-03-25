@@ -1,5 +1,6 @@
 /*
- * 11.01.2022 - 1:13 p.m. - by Kabraxis Luvos
+ * Code based on a Hyperskill tutorial finalized 11.01.2022 - 1:13 p.m. - by Kabraxis Luvos
+ * Code additions, art, menus etc. finalized 24.03.2022 - 4:58 p.m. - by Kabraxis Luvos
  */
 
 import java.util.concurrent.TimeUnit;
@@ -295,7 +296,6 @@ public class Main {
         board[validatedCoordinates[0] - 1][validatedCoordinates[1] - 1] = currentPlayer;
 
         changePlayer();
-
         gameLoop(board);
     }
 
