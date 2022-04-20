@@ -179,7 +179,6 @@ public class Main {
                 "this window to fullscreen mode...");
         pauseAndClearScreen(5, 1);
         System.out.println("Press ENTER to continue...");
-        scanner.reset();
         scanner.nextLine();
     }
 
@@ -224,7 +223,9 @@ public class Main {
 
         pauseAndClearScreen(3, 1);
         System.out.println("Press ENTER to continue...");
-        scanner.reset();
+        // New Scanner object for clearing Scanner buffer after previous number input
+        // to avoid triggering of scanner.nextLine();
+        scanner = new Scanner(System.in);
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
 
@@ -252,13 +253,12 @@ public class Main {
 
         pauseAndClearScreen(3, 1);
         System.out.println("Press ENTER to continue...");
-        scanner.reset();
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
 
-        System.out.println(alignSpacing + "That's it :) So now let's play, shall we?");
+        System.out.println(alignSpacing + "That's it :) So now let's play, shall we?\n");
         System.out.println("Press ENTER to continue...");
-        scanner.reset();
+
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
     }
@@ -603,7 +603,9 @@ public class Main {
 
         pauseAndClearScreen(5, 0);
         System.out.println("Press ENTER to continue...");
-        scanner.reset();
+        // New Scanner object for clearing Scanner buffer after previous number input
+        // to avoid triggering of scanner.nextLine();
+        scanner = new Scanner(System.in);
         scanner.nextLine();
         howToPlay(board);
     }
