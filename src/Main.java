@@ -607,6 +607,6 @@ public class Main {
         // to avoid triggering of scanner.nextLine();
         scanner = new Scanner(System.in);
         scanner.nextLine();
-        howToPlay(board);
+        gameLoop(board);
     }
 }
