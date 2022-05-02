@@ -189,8 +189,8 @@ public class Main {
         do {
             pauseAndClearScreen(0, 100);
             System.out.println(alignSpacing + "Press 1 and ENTER for -~+~°: How to play :°~+~-");
-            System.out.println(alignSpacing + "Press 2 and ENTER to -~+~°: Start the game :°~+~-");
-            System.out.println(alignSpacing + "Press 3 and ENTER to -~+~°: View Credits :°~+~-");
+            System.out.println(alignSpacing + "Press 2 and ENTER for -~+~°: Game start :°~+~-");
+            System.out.println(alignSpacing + "Press 3 and ENTER for -~+~°: The credits :°~+~-");
             while (!scanner.hasNextInt()) {
                 System.out.println("\nFor a how to play enter 1, to start the game, enter 2:\n");
                 scanner.reset(); // clears scanner
