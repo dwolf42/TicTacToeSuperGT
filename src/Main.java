@@ -208,10 +208,10 @@ public class Main {
         pauseAndClearScreen(0, 100);
         printHowToBanner();
         pauseAndClearScreen(0, 1);
-        System.out.println("\n" + alignSpacing + "Hello and welcome to TicTacToe GT, by Kabraxis.");
+        System.out.println("\n" + alignSpacing + "Hello and welcome to TicTacToeSuper GT, by Kabraxis.");
         System.out.println(alignSpacing + "Here you will learn how to play the game.\n");
 
-        System.out.println(alignSpacing + "The game board will be this 3 x 3 square, where");
+        System.out.println(alignSpacing + "The game board is this 3 x 3 square, where");
         System.out.println(alignSpacing + "players may place their mark as X or O symbol,");
         System.out.println(alignSpacing + "to make a move each turn.\n");
 
@@ -231,15 +231,15 @@ public class Main {
         pauseAndClearScreen(0, 100);
 
         printHowToBanner();
-        System.out.println("\n" + alignSpacing + "First choose a row, indicated by the > symbols,");
-        System.out.println(alignSpacing + "followed by a number - the rows look like this: >1, >2, >3.\n");
+        System.out.println("\n" + alignSpacing + "First choose a row, indicated by the > symbols and");
+        System.out.println(alignSpacing + "followed by a number - they look like this: >1, >2, >3.\n");
 
         System.out.println(alignSpacing + "Now choose a column, it's the numbers at the top,");
         System.out.println(alignSpacing + "starting with a * symbol.");
-        System.out.println(alignSpacing + "Enter these numbers, as they represent the location");
+        System.out.println(alignSpacing + "Combine these numbers separated to tell the game");
         System.out.println(alignSpacing + "where you want to place your symbol,");
         System.out.println(alignSpacing + "and confirm by pressing the ENTER key.\n");
-        System.out.println(alignSpacing + "Look at these examples for better understanding:\n");
+        System.out.println(alignSpacing + "Here are examples for a better understanding:\n");
         System.out.println(alignSpacing + "1 1");
         System.out.println(alignSpacing + "2 3");
         System.out.println(alignSpacing + "3 1");
