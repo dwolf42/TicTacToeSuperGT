@@ -268,7 +268,7 @@ public class Main {
     public static void gameLoop(char[][] board) throws InterruptedException {
         Scanner pauseGame = new Scanner(System.in);
 
-        char winner = checkWinconditions(board);
+        char winner = checkWinConditions(board);
 
         printArrayBoardArtGameRuns(board);
 
@@ -393,7 +393,7 @@ public class Main {
         }
     }
 
-    public static char checkWinconditions(char[][] board) {
+    public static char checkWinConditions(char[][] board) {
         /* Iterate through board to determine:
          * -> O wins: three O's in a row
          * -> X wins: three X's in a row
@@ -558,6 +558,8 @@ public class Main {
 
         // Prints out who is the winner
         System.out.println(fromGameLoopWinningLetter);
+
+        System.out.println("Thank you for playing!");
     }
 
     // This area is for style purposes. It's used to pause the game for n seconds and/or clear the screen
