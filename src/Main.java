@@ -178,7 +178,7 @@ public class Main {
         pauseAndClearScreen(0, 5);
         System.out.println(alignSpacing + "Kabraxis: Hi, for the best experience possible, please now enlarge " +
                 "this window to fullscreen mode...");
-        pauseAndClearScreen(5, 1);
+        pauseAndClearScreen(3, 1);
         System.out.println("Press ENTER to continue...");
         scanner.nextLine();
     }
@@ -222,7 +222,7 @@ public class Main {
         System.out.println("                                    >3| _ _ _ |");
         System.out.println("                                      ---------");
 
-        pauseAndClearScreen(3, 1);
+        pauseAndClearScreen(2, 1);
         System.out.println("Press ENTER to continue...");
         // New Scanner object for clearing Scanner buffer after previous number input
         // to avoid triggering of scanner.nextLine();
@@ -252,7 +252,7 @@ public class Main {
         System.out.println("                                    >3| _ _ _ |");
         System.out.println("                                      ---------");
 
-        pauseAndClearScreen(3, 1);
+        pauseAndClearScreen(2, 1);
         System.out.println("Press ENTER to continue...");
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
@@ -262,6 +262,7 @@ public class Main {
 
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
+        howToPlay(board);
     }
 
     public static void gameLoop(char[][] board) throws InterruptedException {
@@ -601,7 +602,7 @@ public class Main {
         System.out.println(alignSpacing + nameDecorationL + "asciiart.eu" + nameDecorationR);
         System.out.println(alignSpacing + nameDecorationL + "textkool.com" + nameDecorationR);
 
-        pauseAndClearScreen(5, 0);
+        pauseAndClearScreen(3, 0);
         System.out.println("Press ENTER to continue...");
         // New Scanner object for clearing Scanner buffer after previous number input
         // to avoid triggering of scanner.nextLine();
