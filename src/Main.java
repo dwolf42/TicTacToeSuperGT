@@ -257,12 +257,12 @@ public class Main {
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
 
-        System.out.println(alignSpacing + "That's it :) So now let's play, shall we?\n");
+        System.out.println(alignSpacing + "That's it. So now let's start the game :) enjoy\n");
         System.out.println("Press ENTER to continue...");
 
         scanner.nextLine();
         pauseAndClearScreen(0, 100);
-        howToPlay(board);
+        gameLoop(board);
     }
 
     public static void gameLoop(char[][] board) throws InterruptedException {
