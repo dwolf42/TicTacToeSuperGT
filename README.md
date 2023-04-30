@@ -16,5 +16,4 @@ Now the game will tell which players turn it is, prints the whole game board bef
  
 Have fun with my game and enjoy ;-)
  
-Kabraxis
- 
+David
